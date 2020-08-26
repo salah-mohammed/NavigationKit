@@ -8,11 +8,7 @@ Navigation Kit used for make threat with screen that have differents navigation 
 
 public class MainNavigationController: NavigationController {
 
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        NavigationColorManager.sharedInstance.navigationController=self;
-        // Do any additional setup after loading the view.
-    }
+
     
 }
 
