@@ -1,3 +1,7 @@
+# Result
+
+![alt text](http://url/to/img.png)
+
 # NavigationKit
 
 Navigation Kit used for make threat with screen that have differents navigation bar style, make change style of bar easy.
