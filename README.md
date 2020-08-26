@@ -2,7 +2,9 @@
 
 Navigation Kit used for make threat with screen that have differents navigation bar style, make change style of bar easy.
 
-how used (configuration): 
+# How used (configuration): 
+
+# First
 public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
@@ -12,17 +14,17 @@ public class MainNavigationController: NavigationController {
     }
     
 }
-
+# Second
 class FirstViewController: UIViewController,NavigationInfoDelegate {
-    var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
-    
-   
-  }
-  
-  class SecondViewController: UIViewController,NavigationInfoDelegate {
-    var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
+   var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
     
  }
+ 
+ class SecondViewController: UIViewController,NavigationInfoDelegate {
+   var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
+    
+}
+# Done
 
-* you can refresh navigation style by 
+# you can refresh navigation style by 
 (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
