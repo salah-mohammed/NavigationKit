@@ -43,5 +43,5 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
  ```
 # Configure Successfully
 
-# you can refresh navigation style by 
+# You can refresh navigation style by 
 (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
