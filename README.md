@@ -47,3 +47,6 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
 ```swift
 (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
  ```
+# Developer Email 
+
+salah.mohamed_1995@hotmail.com
