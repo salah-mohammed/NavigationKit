@@ -13,9 +13,14 @@ public protocol NavigationInfoDelegate{
 }
 
 open class NavigationColorManager:NSObject{
+    public var defaultColor:NavigationColorData?{
+        didSet{
+            self.navigationController?.refrehNavigationInfoVisibleViewController();
+        }
+    }
     private var navigationBarShadowImage:UIImage?
     
-    public var navigationController:UINavigationController?{
+    public var navigationController:NavigationController?{
         didSet{
             navigationBarShadowImage=self.navigationController?.navigationBar.shadowImage;
         }
@@ -35,7 +40,7 @@ override init() {
    open func readViewController(navigationInfo:NavigationInfoDelegate){
         self.read(navigationColor:navigationInfo.navigationColor);
     }
-    private func read(navigationColor:NavigationColorData){
+     func read(navigationColor:NavigationColorData){
         if let barColor:BarColor = navigationColor.barColor{
         switch navigationColor.barColor {
   
