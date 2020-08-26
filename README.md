@@ -5,7 +5,7 @@ Navigation Kit used for make threat with screen that have differents navigation 
 # How used (configuration): 
 
 - First
-
+[
 public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
@@ -35,6 +35,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
         super.viewDidLoad()
     }
 }
+]
 # Configure Successfully
 
 # you can refresh navigation style by 
