@@ -4,7 +4,7 @@ Navigation Kit used for make threat with screen that have differents navigation 
 
 # How used (configuration): 
 
-# First
+First
 public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
@@ -14,14 +14,16 @@ public class MainNavigationController: NavigationController {
     }
     
 }
-# Second
+Second
 class FirstViewController: UIViewController,NavigationInfoDelegate {
-   var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
+ 
+ var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
     
  }
  
  class SecondViewController: UIViewController,NavigationInfoDelegate {
-   var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
+  
+  var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
     
 }
 # Configure Successfully
