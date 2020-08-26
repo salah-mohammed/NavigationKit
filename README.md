@@ -4,7 +4,7 @@ Navigation Kit used for make threat with screen that have differents navigation 
 
 # How used (configuration): 
 
-First
+- First
 
 public class MainNavigationController: NavigationController {
 
@@ -16,7 +16,7 @@ public class MainNavigationController: NavigationController {
     
 }
 
-Second
+- Second
 
 class FirstViewController: UIViewController,NavigationInfoDelegate {
  
