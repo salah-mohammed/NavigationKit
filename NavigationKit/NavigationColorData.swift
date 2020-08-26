@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
-public class NavigationColorData{
-   public var barColor:NavigationColorManager.BarColor?
-   public var textColor:UIColor?
+open class NavigationColorData{
+   open var barColor:NavigationColorManager.BarColor?
+   open var textColor:UIColor?
 
     public init(barColor:NavigationColorManager.BarColor?,textColor:UIColor?) {
         self.barColor=barColor;

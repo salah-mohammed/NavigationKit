@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ThiredViewController.swift
 //  NavigationKitExample
 //
 //  Created by Salah on 8/26/20.
@@ -8,25 +8,22 @@
 
 import UIKit
 import NavigationKit
+class ThiredViewController: UIViewController,NavigationInfoDelegate {
+    var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), textColor:UIColor.white)
 
-class SecondViewController: UIViewController,NavigationInfoDelegate {
-    @IBOutlet weak var btnToThired: UIButton!
-    var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
-
+    @IBOutlet weak var btnRefresh: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title="Change bar color with title";
+        self.title="background Image with title Color"
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        
     }
     
-    @IBAction func btnToThired(_ sender: Any) {
-        if let thiredViewController:ThiredViewController=UIStoryboard.init(name:"Main", bundle: nil).instantiateViewController(withIdentifier:"ThiredViewController") as? ThiredViewController{
-            self.navigationController!.pushViewController(thiredViewController, animated: true);
-        }
+    @IBAction func btnRefresh(_ sender: Any) {
+        self.navigationColor = NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
+        (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
     }
     
     /*
@@ -40,3 +37,4 @@ class SecondViewController: UIViewController,NavigationInfoDelegate {
     */
 
 }
+

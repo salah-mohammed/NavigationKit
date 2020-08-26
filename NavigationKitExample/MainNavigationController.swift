@@ -8,19 +8,12 @@
 
 import UIKit
 import NavigationKit
-class MainNavigationController: UINavigationController,UINavigationControllerDelegate {
+public class MainNavigationController: NavigationController {
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate=self;
+        NavigationColorManager.sharedInstance.navigationController=self;
         // Do any additional setup after loading the view.
     }
-    
-
-//    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-//        if let viewController:NavigationInfoDelegate=viewController as? NavigationInfoDelegate{
-//        NavigationColorManager.sharedInstance.readViewController(navigationInfo: viewController);
-//        }
-//    }
     
 }
