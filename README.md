@@ -24,7 +24,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
    var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
     
 }
-# Done
+# Configure Successfully
 
 # you can refresh navigation style by 
 (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
