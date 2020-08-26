@@ -5,7 +5,8 @@ Navigation Kit used for make threat with screen that have differents navigation 
 # How used (configuration): 
 
 - First
-[
+
+```swift
 public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
@@ -15,9 +16,9 @@ public class MainNavigationController: NavigationController {
     }
     
 }
-
+```
 - Second
-
+```swift
 class FirstViewController: UIViewController,NavigationInfoDelegate {
  
  var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
@@ -26,7 +27,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
         super.viewDidLoad()
     }
  }
- 
+
  class SecondViewController: UIViewController,NavigationInfoDelegate {
   
   var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
@@ -35,7 +36,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
         super.viewDidLoad()
     }
 }
-]
+ ```
 # Configure Successfully
 
 # you can refresh navigation style by 
