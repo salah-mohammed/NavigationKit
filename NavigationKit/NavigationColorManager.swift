@@ -44,12 +44,13 @@ override init() {
             break;
 
         case .customColor(let color):
+            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
             self.navigationController?.navigationBar.barTintColor=color
             self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
             self.navigationController?.navigationBar.isTranslucent = false
             break;
         case .backgroundImage(let image):
-        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+            self.navigationController?.navigationBar.setBackgroundImage(image.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
         self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
         self.navigationController?.navigationBar.isTranslucent = false
             break;

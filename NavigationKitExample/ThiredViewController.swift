@@ -22,7 +22,7 @@ class ThiredViewController: UIViewController,NavigationInfoDelegate {
     }
     
     @IBAction func btnRefresh(_ sender: Any) {
-        self.navigationColor = NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
+        self.navigationColor = NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.yellow), textColor:UIColor.black)
         (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
     }
     
@@ -37,4 +37,6 @@ class ThiredViewController: UIViewController,NavigationInfoDelegate {
     */
 
 }
+
+
 
