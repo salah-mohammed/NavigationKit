@@ -7,7 +7,11 @@
 Navigation Kit used for make threat with screen that have differents navigation bar style, make change style of bar easy.
 
 # How used (configuration): 
-
+# Pod install
+```ruby
+pod 'ATAppUpdater',:git => "ttps://github.com/salah-mohammed/NavigationKit.git"
+ 
+```
 - First
 
 ```swift
