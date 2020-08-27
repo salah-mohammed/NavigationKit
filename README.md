@@ -9,7 +9,7 @@ Navigation Kit used for make threat with screen that have differents navigation 
 # How used (configuration): 
 # Pod install
 ```ruby
-pod 'ATAppUpdater',:git => "ttps://github.com/salah-mohammed/NavigationKit.git"
+pod 'NavigationKit',:git => "ttps://github.com/salah-mohammed/NavigationKit.git"
  
 ```
 - First
