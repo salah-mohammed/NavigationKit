@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NavigationKit:
-    :commit: bed312eea550f346f01be216ec67ce6ed8329e90
+    :commit: 9c845c641d6c454d389f85e5729a22e162deae6f
     :git: https://github.com/salah-mohammed/NavigationKit.git
 
 SPEC CHECKSUMS:

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF36B7D653A06895BFDD5D9 /* Pods_NavigationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74CC3BFA66BA3B5B4571522 /* Pods_NavigationKit.framework */; };
 		4E6ECD5424F656E000225EBE /* NavigationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6ECD5224F656E000225EBE /* NavigationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6ECD5B24F6570800225EBE /* NavigationColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD5A24F6570800225EBE /* NavigationColorData.swift */; };
 		4E6ECD5D24F6572600225EBE /* NavigationColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD5C24F6572600225EBE /* NavigationColorManager.swift */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF36B7D653A06895BFDD5D9 /* Pods_NavigationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +191,7 @@
 				4E6ECD5E24F6583200225EBE /* Sources */,
 				4E6ECD5F24F6583200225EBE /* Frameworks */,
 				4E6ECD6024F6583200225EBE /* Resources */,
-				6635B0FFE69E361E844BEB26 /* [CP] Embed Pods Frameworks */,
+				9E5B22719C3A6FC9C7BD8AE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,23 +261,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6635B0FFE69E361E844BEB26 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6E24CC09107A7BDDC6DE0D1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +281,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E5B22719C3A6FC9C7BD8AE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C9B8924583A67B4366F934D4 /* [CP] Check Pods Manifest.lock */ = {
