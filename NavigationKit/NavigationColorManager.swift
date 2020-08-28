@@ -9,11 +9,21 @@
 import Foundation
 import UIKit
 public protocol NavigationInfoDelegate{
-    var navigationColor:NavigationColorData{set get}
+    var navigationColor:NavigationData{set get}
 }
 
-open class NavigationColorManager:NSObject{
-    public var defaultColor:NavigationColorData?{
+open class NavigationStyleManager:NSObject{
+    public enum NavigationStyle{
+    case hide
+    case custom(BarColor,textColor:UIColor)
+    }
+    public enum BarColor{
+    case transparent
+    case customColor(UIColor)
+    case backgroundImage(UIImage)
+    }
+    
+    public var defaultColor:NavigationData?{
         didSet{
             self.navigationController?.refrehNavigationInfoVisibleViewController();
         }
@@ -25,17 +35,8 @@ open class NavigationColorManager:NSObject{
             navigationBarShadowImage=self.navigationController?.navigationBar.shadowImage;
         }
     }
-    public enum HideNavigation{
-    case hide
-    case customColor(BarColor,UIColor)
-    }
-    public enum BarColor{
-    case transparent
-    case customColor(UIColor)
-    case backgroundImage(UIImage)
-    }
    
-    public static let sharedInstance: NavigationColorManager = { NavigationColorManager()} ()
+    public static let sharedInstance: NavigationStyleManager = { NavigationStyleManager()} ()
 
 override init() {
     super.init()
@@ -44,13 +45,13 @@ override init() {
    open func readViewController(navigationInfo:NavigationInfoDelegate){
         self.read(navigationColor:navigationInfo.navigationColor);
     }
-     func read(navigationColor:NavigationColorData){
-        if let hideNavigation:HideNavigation = navigationColor.hideNavigation{
-            switch hideNavigation {
+     func read(navigationColor:NavigationData){
+        if let navigationStyle:NavigationStyle = navigationColor.navigationStyle{
+            switch navigationStyle {
             case .hide:
                 self.navigationController?.navigationBar.isHidden=true;
                 break;
-            case .customColor(let barColor,let textColor):
+            case .custom(let barColor,let textColor):
                 self.navigationController?.navigationBar.isHidden=false;
                       switch barColor {
                       case .transparent:

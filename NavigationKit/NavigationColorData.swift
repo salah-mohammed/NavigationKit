@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
-open class NavigationColorData{
-   open var hideNavigation:NavigationColorManager.HideNavigation?
-    public init(hideNavigation:NavigationColorManager.HideNavigation?) {
-        self.hideNavigation=hideNavigation;
+open class NavigationData{
+   open var navigationStyle:NavigationStyleManager.NavigationStyle?
+    public init(_ navigationStyle:NavigationStyleManager.NavigationStyle?) {
+        self.navigationStyle=navigationStyle;
     }
 }
