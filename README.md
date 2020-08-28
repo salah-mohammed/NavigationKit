@@ -45,6 +45,20 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
  }
 
  ```
+ 
+ if you want to set Navigation bar color and set title color for it.
+ 
+ ```swift
+
+  class SecondViewController: UIViewController,NavigationInfoDelegate {
+  
+    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
+    
+        public override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+```
 if you want to hide Navigation bar.
 
  ```swift
