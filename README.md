@@ -62,7 +62,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
 if you want to hide Navigation bar.
 
  ```swift
- class SecondViewController: UIViewController,NavigationInfoDelegate {
+ class ThiredViewController: UIViewController,NavigationInfoDelegate {
 
     var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.hide);
     
@@ -75,7 +75,7 @@ if you want to hide Navigation bar.
 if you want to set background image for Navigation bar and set title color for it.
 
  ```swift
- class ThiredViewController: UIViewController,NavigationInfoDelegate {
+ class ForthViewController: UIViewController,NavigationInfoDelegate {
 
     var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), UIColor.white))
     
