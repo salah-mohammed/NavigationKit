@@ -32,6 +32,7 @@ public class MainNavigationController: NavigationController {
 }
 ```
 - Second
+
 if you want set Navigation bar transparent and change title color .
 ```swift
 class FirstViewController: UIViewController,NavigationInfoDelegate {
