@@ -12,7 +12,8 @@ public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationManager.sharedInstance.navigationController=self;
+        NavigationManager.shared.navigationController=self;
+        NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.hide);
         // Do any additional setup after loading the view.
     }
     
