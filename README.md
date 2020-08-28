@@ -37,7 +37,7 @@ if you want set Navigation bar transparent and change title color .
 ```swift
 class FirstViewController: UIViewController,NavigationDelegate {
  
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.transparent, UIColor.black))
+    var navigationData:NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.transparent,titleColor:UIColor.black))
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ class FirstViewController: UIViewController,NavigationDelegate {
 
   class SecondViewController: UIViewController,NavigationDelegate {
   
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
+  var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.customColor(UIColor.blue), titleColor:  UIColor.white))
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,7 @@ if you want to hide Navigation bar.
  ```swift
  class ThiredViewController: UIViewController,NavigationDelegate {
 
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.hide);
+    var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.hide);
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +77,7 @@ if you want to set background image for Navigation bar and set title color for i
  ```swift
  class ForthViewController: UIViewController,NavigationDelegate {
 
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), UIColor.white))
+    var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), titleColor: UIColor.white))
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +88,7 @@ if you want to set background image for Navigation bar and set title color for i
 
 if you want to set default style 'if Viewcontroller not implement NavigationInfoDelegate'
 ```swift
-NavigationColorManager.shared.defaultColor = NavigationData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
+NavigationColorManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.customColor(UIColor.blue), titleColor:  UIColor.white))
 
  ```
 # Configure Successfully
