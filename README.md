@@ -7,7 +7,11 @@
 Navigation Kit used for make threat with screen that have differents navigation bar style, make change style of bar easy.
 
 # How used (configuration): 
-
+# Pod install
+```ruby
+pod 'NavigationKit',:git => "https://github.com/salah-mohammed/NavigationKit.git"
+ 
+```
 - First
 
 ```swift
@@ -44,4 +48,10 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
 # Configure Successfully
 
 # You can refresh navigation style by 
+```swift
 (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
+ ```
+# Developer's information to communicate
+
+- salah.mohamed_1995@hotmail.com
+- https://www.facebook.com/salah.shaker.7
