@@ -10,7 +10,7 @@ Navigation Kit used for make threat with screen that have differents navigation 
 * set color for navigation bar and their title for every single screen.
 * Hide navigation bar feature for every single screen.
 * can make navigation bar color transparent for every single screen.
-* can set default navigation bar style if Viewcontroller not implement NavigationInfoDelegate will take this default style.
+* can set default navigation bar style if Viewcontroller not implement NavigationDelegate will take this default style.
 
 # How used (configuration): 
 # Pod install
@@ -25,7 +25,7 @@ public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationColorManager.sharedInstance.navigationController=self;
+        NavigationManager.sharedInstance.navigationController=self;
         // Do any additional setup after loading the view.
     }
     
