@@ -5,6 +5,11 @@
 # NavigationKit
 
 Navigation Kit used for make threat with screen that have differents navigation bar style, make change style of bar easy.
+# Advantages
+* setBackgroundImage for navigation bar for every single screen.
+* set color for navigation bar and their title for every single screen.
+* Hide navigation bar feature for every screen.
+* can make navigation bar color transparent.
 
 # How used (configuration): 
 # Pod install
