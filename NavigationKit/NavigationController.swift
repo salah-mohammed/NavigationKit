@@ -22,7 +22,8 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
             NavigationManager.sharedInstance.read(navigationColor:defaultColor)
         }
     }
-    open func refrehNavigationInfoVisibleViewController(){
+     // MARK:refreh NavigationData for VisibleViewController
+    open func refrehNavigationData(){
         if let viewController:NavigationDelegate = self.visibleViewController as? NavigationDelegate{
               NavigationManager.sharedInstance.readViewController(navigationDelegate: viewController);
         }else if let defaultColor:NavigationData = NavigationManager.sharedInstance.defaultColor{

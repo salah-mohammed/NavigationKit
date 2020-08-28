@@ -25,7 +25,7 @@ open class NavigationManager:NSObject{
     
     public var defaultColor:NavigationData?{
         didSet{
-            self.navigationController?.refrehNavigationInfoVisibleViewController();
+            self.navigationController?.refrehNavigationData();
         }
     }
     private var navigationBarShadowImage:UIImage?
