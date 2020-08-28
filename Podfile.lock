@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NavigationKit:
-    :commit: 9c845c641d6c454d389f85e5729a22e162deae6f
+    :commit: 2b2a0941b8538fa503d7cb3110069dfeb8dc30b2
     :git: https://github.com/salah-mohammed/NavigationKit.git
 
 SPEC CHECKSUMS:
   NavigationKit: 82ece38cd849e4bd85674e65e0b0a88c951846ec
 
-PODFILE CHECKSUM: a77a093a21556891f5d090ec6453cdeaa1f566c1
+PODFILE CHECKSUM: d64c5a82fd98646758c5ce057e2063f04f631dc1
 
 COCOAPODS: 1.9.1
