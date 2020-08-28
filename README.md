@@ -85,6 +85,7 @@ if you want to set background image for Navigation bar and set title color for i
 }
  ```
 - Thired
+
 if you want to set default style 'if Viewcontroller not implement NavigationInfoDelegate'
 ```swift
 NavigationColorManager.sharedInstance.defaultColor = NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
