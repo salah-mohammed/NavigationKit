@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CF36B7D653A06895BFDD5D9 /* Pods_NavigationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74CC3BFA66BA3B5B4571522 /* Pods_NavigationKit.framework */; };
 		4E6ECD5424F656E000225EBE /* NavigationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6ECD5224F656E000225EBE /* NavigationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6ECD5B24F6570800225EBE /* NavigationColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD5A24F6570800225EBE /* NavigationColorData.swift */; };
 		4E6ECD5D24F6572600225EBE /* NavigationColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD5C24F6572600225EBE /* NavigationColorManager.swift */; };
@@ -57,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CF36B7D653A06895BFDD5D9 /* Pods_NavigationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

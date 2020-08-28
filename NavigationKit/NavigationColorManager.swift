@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-public protocol NavigationInfoDelegate{
-    var navigationColor:NavigationData{set get}
+public protocol NavigationDelegate{
+    var navigationData:NavigationData{set get}
 }
 
-open class NavigationStyleManager:NSObject{
+open class NavigationManager:NSObject{
     public enum NavigationStyle{
     case hide
     case custom(BarColor,titleColor:UIColor)
@@ -36,14 +36,14 @@ open class NavigationStyleManager:NSObject{
         }
     }
    
-    public static let sharedInstance: NavigationStyleManager = { NavigationStyleManager()} ()
+    public static let sharedInstance: NavigationManager = { NavigationManager()} ()
 
 override init() {
     super.init()
     
 }
-   open func readViewController(navigationInfo:NavigationInfoDelegate){
-        self.read(navigationColor:navigationInfo.navigationColor);
+   open func readViewController(navigationDelegate:NavigationDelegate){
+        self.read(navigationColor:navigationDelegate.navigationData);
     }
      func read(navigationColor:NavigationData){
         if let navigationStyle:NavigationStyle = navigationColor.navigationStyle{
