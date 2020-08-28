@@ -32,6 +32,7 @@ public class MainNavigationController: NavigationController {
 }
 ```
 - Second
+if you want set Navigation bar transparent and change title color .
 ```swift
 class FirstViewController: UIViewController,NavigationInfoDelegate {
  
@@ -51,8 +52,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
     }
 }
  ```
-
-- Thired
+if you want to hide Navigation bar.
 
  ```swift
  class SecondViewController: UIViewController,NavigationInfoDelegate {
@@ -66,6 +66,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
  ```
 
 - Forth
+if you want to set background image for Navigation bar and set title color for it.
 
  ```swift
  class SecondViewController: UIViewController,NavigationInfoDelegate {
