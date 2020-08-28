@@ -23,7 +23,7 @@ open class NavigationManager:NSObject{
     case backgroundImage(UIImage)
     }
     
-    public var defaultColor:NavigationData?{
+    public var defaultData:NavigationData?{
         didSet{
             self.navigationController?.refrehNavigationData();
         }
@@ -36,7 +36,7 @@ open class NavigationManager:NSObject{
         }
     }
    
-    public static let sharedInstance: NavigationManager = { NavigationManager()} ()
+    public static let shared: NavigationManager = { NavigationManager()} ()
 
 override init() {
     super.init()

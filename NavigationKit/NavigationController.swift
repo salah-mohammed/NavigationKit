@@ -17,17 +17,17 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
 
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if let viewController:NavigationDelegate=viewController as? NavigationDelegate{
-        NavigationManager.sharedInstance.readViewController(navigationDelegate: viewController);
-        }else if let defaultColor:NavigationData = NavigationManager.sharedInstance.defaultColor{
-            NavigationManager.sharedInstance.read(navigationColor:defaultColor)
+        NavigationManager.shared.readViewController(navigationDelegate: viewController);
+        }else if let defaultColor:NavigationData = NavigationManager.shared.defaultData{
+            NavigationManager.shared.read(navigationColor:defaultColor)
         }
     }
      // MARK:refreh NavigationData for VisibleViewController
     open func refrehNavigationData(){
         if let viewController:NavigationDelegate = self.visibleViewController as? NavigationDelegate{
-              NavigationManager.sharedInstance.readViewController(navigationDelegate: viewController);
-        }else if let defaultColor:NavigationData = NavigationManager.sharedInstance.defaultColor{
-            NavigationManager.sharedInstance.read(navigationColor:defaultColor)
+              NavigationManager.shared.readViewController(navigationDelegate: viewController);
+        }else if let defaultColor:NavigationData = NavigationManager.shared.defaultData{
+            NavigationManager.shared.read(navigationColor:defaultColor)
         }
     }
 }
