@@ -44,14 +44,6 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
     }
  }
 
- class SecondViewController: UIViewController,NavigationInfoDelegate {
-  
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
-    
-        public override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
  ```
 if you want to hide Navigation bar.
 
