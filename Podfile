@@ -14,6 +14,6 @@ target 'NavigationKitExample' do
   use_frameworks!
 
   # Pods for NavigationKitExample
-pod 'NavigationKit',:git => "https://github.com/salah-mohammed/NavigationKit.git"
+#pod 'NavigationKit',:git => "https://github.com/salah-mohammed/NavigationKit.git"
 
 end
