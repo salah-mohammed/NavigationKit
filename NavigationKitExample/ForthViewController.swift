@@ -32,7 +32,7 @@ class ForthViewController: UIViewController,NavigationDelegate {
     @IBAction func btnRefresh(_ sender: Any) {
         lblDescription.text="navigation bar change background image to set navigation bar yellow color";
         self.navigationData = NavigationData.init(NavigationManager.NavigationStyle.custom(.customColor(UIColor.yellow),titleColor:UIColor.black))
-        (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
+        (self.navigationController as? MainNavigationController)?.refrehNavigationData();
     }
     
     /*
