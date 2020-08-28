@@ -48,12 +48,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigation Bar with Transparent bar color and title color" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0k-Rd-jJe">
+                                <rect key="frame" x="0.0" y="284" width="414" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="f0k-Rd-jJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4yZ-TD-UAn"/>
+                            <constraint firstAttribute="trailing" secondItem="f0k-Rd-jJe" secondAttribute="trailing" id="9uj-4n-9NU"/>
                             <constraint firstItem="8iV-nO-BZO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E7z-Pw-Bcf"/>
                             <constraint firstItem="IVN-ek-p8S" firstAttribute="top" secondItem="8iV-nO-BZO" secondAttribute="bottom" id="WAJ-Nl-ebC"/>
                             <constraint firstItem="IVN-ek-p8S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dyV-Zo-hy1"/>
+                            <constraint firstItem="8iV-nO-BZO" firstAttribute="top" secondItem="f0k-Rd-jJe" secondAttribute="bottom" id="xVd-c8-RR0"/>
                             <constraint firstItem="IVN-ek-p8S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ynE-fJ-x9Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,12 +102,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigation Bar with custom bar color and title Color" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54c-4D-BPK">
+                                <rect key="frame" x="0.0" y="284" width="414" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8bw-Dj-z7Y" firstAttribute="centerX" secondItem="UDV-Ub-x0g" secondAttribute="centerX" id="0w4-Yb-Frx"/>
+                            <constraint firstAttribute="trailing" secondItem="54c-4D-BPK" secondAttribute="trailing" id="2Uf-OC-e0n"/>
                             <constraint firstItem="hbm-I4-WvL" firstAttribute="centerX" secondItem="UDV-Ub-x0g" secondAttribute="centerX" id="8DY-Tz-nCf"/>
+                            <constraint firstItem="8bw-Dj-z7Y" firstAttribute="top" secondItem="54c-4D-BPK" secondAttribute="bottom" id="9zL-hP-v1h"/>
+                            <constraint firstItem="54c-4D-BPK" firstAttribute="centerX" secondItem="UDV-Ub-x0g" secondAttribute="centerX" id="AAW-vB-ybs"/>
                             <constraint firstItem="hbm-I4-WvL" firstAttribute="top" secondItem="8bw-Dj-z7Y" secondAttribute="bottom" id="SoW-JD-aPn"/>
+                            <constraint firstItem="54c-4D-BPK" firstAttribute="leading" secondItem="UDV-Ub-x0g" secondAttribute="leading" id="Wm8-Pg-wQf"/>
                             <constraint firstItem="hbm-I4-WvL" firstAttribute="centerY" secondItem="UDV-Ub-x0g" secondAttribute="centerY" id="iFD-AA-uWe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fMB-1I-sej"/>
@@ -137,18 +156,28 @@
                                     <action selector="btnRefresh:" destination="Hr7-Tk-NzH" eventType="touchUpInside" id="7so-t7-dOX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigation Bar with background Image  and custom title color" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNE-gx-3yb">
+                                <rect key="frame" x="0.0" y="283.5" width="414" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="uPY-y0-VXk" firstAttribute="top" secondItem="aNE-gx-3yb" secondAttribute="bottom" id="0EZ-5A-umd"/>
                             <constraint firstItem="uPY-y0-VXk" firstAttribute="centerX" secondItem="QOp-GI-GlG" secondAttribute="centerX" id="JTb-o6-Uek"/>
+                            <constraint firstItem="4pU-H3-QRZ" firstAttribute="trailing" secondItem="aNE-gx-3yb" secondAttribute="trailing" id="Lel-DD-Yz6"/>
                             <constraint firstItem="o5Z-Vw-OU7" firstAttribute="top" secondItem="uPY-y0-VXk" secondAttribute="bottom" id="YJ6-Y3-csP"/>
                             <constraint firstItem="o5Z-Vw-OU7" firstAttribute="centerY" secondItem="QOp-GI-GlG" secondAttribute="centerY" id="ZdT-sc-6Vi"/>
                             <constraint firstItem="o5Z-Vw-OU7" firstAttribute="centerX" secondItem="QOp-GI-GlG" secondAttribute="centerX" id="cpm-Kt-JfA"/>
+                            <constraint firstItem="aNE-gx-3yb" firstAttribute="leading" secondItem="4pU-H3-QRZ" secondAttribute="leading" id="iZF-Zy-cql"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4pU-H3-QRZ"/>
                     </view>
                     <connections>
                         <outlet property="btnRefresh" destination="o5Z-Vw-OU7" id="kFs-1g-RPz"/>
+                        <outlet property="lblDescription" destination="aNE-gx-3yb" id="mTK-Jz-FNa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYn-mu-NsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,10 +209,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hid Navigation Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-iP-OYy">
+                                <rect key="frame" x="110.5" y="312" width="193" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="j1R-Uv-G2I" firstAttribute="top" secondItem="p3V-In-ju4" secondAttribute="bottom" id="4RA-ac-cDX"/>
+                            <constraint firstItem="p3V-In-ju4" firstAttribute="top" secondItem="hjr-iP-OYy" secondAttribute="bottom" id="8TB-BZ-P2E"/>
+                            <constraint firstItem="hjr-iP-OYy" firstAttribute="centerX" secondItem="prB-AP-dgO" secondAttribute="centerX" id="Tx6-Dd-Ioh"/>
                             <constraint firstItem="j1R-Uv-G2I" firstAttribute="centerY" secondItem="prB-AP-dgO" secondAttribute="centerY" id="cxl-yd-fWf"/>
                             <constraint firstItem="p3V-In-ju4" firstAttribute="centerX" secondItem="prB-AP-dgO" secondAttribute="centerX" id="osf-gb-9Hr"/>
                             <constraint firstItem="j1R-Uv-G2I" firstAttribute="centerX" secondItem="prB-AP-dgO" secondAttribute="centerX" id="w4J-s9-foL"/>

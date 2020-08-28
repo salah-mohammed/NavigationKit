@@ -14,6 +14,7 @@ class ForthViewController: UIViewController,NavigationInfoDelegate {
     var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), UIColor.white))
 
     @IBOutlet weak var btnRefresh: UIButton!
+    @IBOutlet weak var lblDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="background Image with title Color"
@@ -28,6 +29,7 @@ class ForthViewController: UIViewController,NavigationInfoDelegate {
     }
     
     @IBAction func btnRefresh(_ sender: Any) {
+        lblDescription.text="navigation bar change background image to set navigation bar yellow color";
         self.navigationColor = NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(.customColor(UIColor.yellow), UIColor.black))
         (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
     }
