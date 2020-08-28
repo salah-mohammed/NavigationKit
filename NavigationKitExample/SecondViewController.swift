@@ -11,10 +11,11 @@ import NavigationKit
 
 class SecondViewController: UIViewController,NavigationInfoDelegate {
     @IBOutlet weak var btnToThired: UIButton!
-    var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
-
+    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title="Change bar color with title";
         // Do any additional setup after loading the view.
     }

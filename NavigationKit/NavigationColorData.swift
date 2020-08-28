@@ -9,10 +9,8 @@
 import Foundation
 import UIKit
 open class NavigationColorData{
-   open var barColor:NavigationColorManager.BarColor?
-   open var textColor:UIColor?
-    public init(barColor:NavigationColorManager.BarColor?,textColor:UIColor?) {
-        self.barColor=barColor;
-        self.textColor=textColor;
+   open var hideNavigation:NavigationColorManager.HideNavigation?
+    public init(hideNavigation:NavigationColorManager.HideNavigation?) {
+        self.hideNavigation=hideNavigation;
     }
 }

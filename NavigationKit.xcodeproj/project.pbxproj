@@ -20,6 +20,7 @@
 		4E6ECD7924F658F200225EBE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD7824F658F200225EBE /* SecondViewController.swift */; };
 		4E6ECD7B24F661C400225EBE /* ThiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */; };
 		4E6ECD7D24F662EE00225EBE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD7C24F662EE00225EBE /* NavigationController.swift */; };
+		4E6ECD9124F8CEFF00225EBE /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4E6ECD7824F658F200225EBE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThiredViewController.swift; sourceTree = "<group>"; };
 		4E6ECD7C24F662EE00225EBE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				4E6ECD7824F658F200225EBE /* SecondViewController.swift */,
 				4E6ECD7624F6588600225EBE /* MainNavigationController.swift */,
 				4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */,
+				4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */,
 				4E6ECD6A24F6583200225EBE /* Main.storyboard */,
 				4E6ECD6D24F6583600225EBE /* Assets.xcassets */,
 				4E6ECD6F24F6583600225EBE /* LaunchScreen.storyboard */,
@@ -232,6 +235,7 @@
 				4E6ECD6924F6583200225EBE /* FirstViewController.swift in Sources */,
 				4E6ECD6524F6583200225EBE /* AppDelegate.swift in Sources */,
 				4E6ECD7B24F661C400225EBE /* ThiredViewController.swift in Sources */,
+				4E6ECD9124F8CEFF00225EBE /* ForthViewController.swift in Sources */,
 				4E6ECD7724F6588600225EBE /* MainNavigationController.swift in Sources */,
 				4E6ECD7924F658F200225EBE /* SecondViewController.swift in Sources */,
 				4E6ECD6724F6583200225EBE /* SceneDelegate.swift in Sources */,
@@ -392,6 +396,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NavigationKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,6 +423,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NavigationKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,6 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				INFOPLIST_FILE = NavigationKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				INFOPLIST_FILE = NavigationKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -25,6 +25,10 @@ open class NavigationColorManager:NSObject{
             navigationBarShadowImage=self.navigationController?.navigationBar.shadowImage;
         }
     }
+    public enum HideNavigation{
+    case hide
+    case customColor(BarColor,UIColor)
+    }
     public enum BarColor{
     case transparent
     case customColor(UIColor)
@@ -41,29 +45,36 @@ override init() {
         self.read(navigationColor:navigationInfo.navigationColor);
     }
      func read(navigationColor:NavigationColorData){
-        if let barColor:BarColor = navigationColor.barColor{
-        switch navigationColor.barColor {
-  
-        case .transparent:
-            transparentNav();
-            break;
+        if let hideNavigation:HideNavigation = navigationColor.hideNavigation{
+            switch hideNavigation {
+            case .hide:
+                self.navigationController?.navigationBar.isHidden=true;
+                break;
+            case .customColor(let barColor,let textColor):
+                self.navigationController?.navigationBar.isHidden=false;
+                      switch barColor {
+                      case .transparent:
+                          transparentNav();
+                          break;
+                      case .customColor(let color):
+                          self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+                          self.navigationController?.navigationBar.barTintColor=color
+                          self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
+                          self.navigationController?.navigationBar.isTranslucent = false
+                          break;
+                      case .backgroundImage(let image):
+                          self.navigationController?.navigationBar.setBackgroundImage(image.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
+                      self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
+                      self.navigationController?.navigationBar.isTranslucent = false
+                          break;
+ 
+                          }
+                     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:textColor]
+                     break;
 
-        case .customColor(let color):
-            self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-            self.navigationController?.navigationBar.barTintColor=color
-            self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
-            self.navigationController?.navigationBar.isTranslucent = false
-            break;
-        case .backgroundImage(let image):
-            self.navigationController?.navigationBar.setBackgroundImage(image.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
-        self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
-        self.navigationController?.navigationBar.isTranslucent = false
-            break;
-        case .none:
-            break;
             }
-        }
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:navigationColor.textColor]
+            }
+
     }
     func transparentNav(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

@@ -8,24 +8,21 @@
 
 import UIKit
 import NavigationKit
-class ThiredViewController: UIViewController,NavigationInfoDelegate {
-    var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), textColor:UIColor.white)
 
-    @IBOutlet weak var btnRefresh: UIButton!
+class ThiredViewController: UIViewController,NavigationInfoDelegate {
+    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.hide);
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title="background Image with title Color"
+
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
+    @IBAction func btnToForth(_ sender: Any) {
+        if let thiredViewController:ForthViewController=UIStoryboard.init(name:"Main", bundle: nil).instantiateViewController(withIdentifier:"ForthViewController") as? ForthViewController{
+            self.navigationController!.pushViewController(thiredViewController, animated: true);
+        }
     }
-    
-    @IBAction func btnRefresh(_ sender: Any) {
-        self.navigationColor = NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.yellow), textColor:UIColor.black)
-        (self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
-    }
-    
+
     /*
     // MARK: - Navigation
 
@@ -37,6 +34,3 @@ class ThiredViewController: UIViewController,NavigationInfoDelegate {
     */
 
 }
-
-
-
