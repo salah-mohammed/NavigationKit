@@ -15,7 +15,7 @@ public protocol NavigationInfoDelegate{
 open class NavigationStyleManager:NSObject{
     public enum NavigationStyle{
     case hide
-    case custom(BarColor,textColor:UIColor)
+    case custom(BarColor,titleColor:UIColor)
     }
     public enum BarColor{
     case transparent
