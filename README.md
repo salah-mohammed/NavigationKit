@@ -35,8 +35,8 @@ public class MainNavigationController: NavigationController {
 ```swift
 class FirstViewController: UIViewController,NavigationInfoDelegate {
  
- var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.transparent, textColor:UIColor.black)
- 
+    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.transparent, UIColor.black))
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,13 +44,40 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
 
  class SecondViewController: UIViewController,NavigationInfoDelegate {
   
-  var navigationColor: NavigationColorData=NavigationColorData.init(barColor: NavigationColorManager.BarColor.customColor(UIColor.blue), textColor:UIColor.white)
+    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
     
         public override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
  ```
+
+- Thired
+
+ ```swift
+ class SecondViewController: UIViewController,NavigationInfoDelegate {
+
+    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.hide);
+    
+        public override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+ ```
+
+- Forth
+
+ ```swift
+ class SecondViewController: UIViewController,NavigationInfoDelegate {
+
+    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), UIColor.white))
+    
+        public override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+ ```
+
 # Configure Successfully
 
 # You can refresh navigation style by 
