@@ -8,8 +8,9 @@ Navigation Kit used for make threat with screen that have differents navigation 
 # Advantages
 * set Background Image for navigation bar and title color for every single screen.
 * set color for navigation bar and their title for every single screen.
-* Hide navigation bar feature for every screen.
-* can make navigation bar color transparent.
+* Hide navigation bar feature for every single screen.
+* can make navigation bar color transparent for every single screen.
+* can set default navigation bar style if Viewcontroller not implement NavigationInfoDelegate will take this default style.
 
 # How used (configuration): 
 # Pod install
