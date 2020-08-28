@@ -21,7 +21,7 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
         
     }
     @IBAction func btToSecondViewController(_ sender: Any) {
-        if let secondViewController:SecondViewController=UIStoryboard.init(name:"Main", bundle: nil).instantiateViewController(withIdentifier:"SecondViewController") as? SecondViewController{
+        if let secondViewController:SecondViewController=UIStoryboard.init(name:"MainStoryboard", bundle: nil).instantiateViewController(withIdentifier:"SecondViewController") as? SecondViewController{
             self.navigationController!.pushViewController(secondViewController, animated: true);
         }
     }

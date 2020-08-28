@@ -20,6 +20,7 @@
 		4E6ECD7B24F661C400225EBE /* ThiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */; };
 		4E6ECD7D24F662EE00225EBE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD7C24F662EE00225EBE /* NavigationController.swift */; };
 		4E6ECD9124F8CEFF00225EBE /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */; };
+		4E6ECD9424F8DE1F00225EBE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6ECD9224F8DE1F00225EBE /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThiredViewController.swift; sourceTree = "<group>"; };
 		4E6ECD7C24F662EE00225EBE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
+		4E6ECD9324F8DE1F00225EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				4E6ECD7624F6588600225EBE /* MainNavigationController.swift */,
 				4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */,
 				4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */,
+				4E6ECD9224F8DE1F00225EBE /* MainStoryboard.storyboard */,
 				4E6ECD6D24F6583600225EBE /* Assets.xcassets */,
 				4E6ECD6F24F6583600225EBE /* LaunchScreen.storyboard */,
 				4E6ECD7224F6583600225EBE /* Info.plist */,
@@ -208,6 +211,7 @@
 			files = (
 				4E6ECD7124F6583600225EBE /* LaunchScreen.storyboard in Resources */,
 				4E6ECD6E24F6583600225EBE /* Assets.xcassets in Resources */,
+				4E6ECD9424F8DE1F00225EBE /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +251,14 @@
 				4E6ECD7024F6583600225EBE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4E6ECD9224F8DE1F00225EBE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E6ECD9324F8DE1F00225EBE /* Base */,
+			);
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

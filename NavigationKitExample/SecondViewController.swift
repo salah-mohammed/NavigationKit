@@ -25,7 +25,7 @@ class SecondViewController: UIViewController,NavigationInfoDelegate {
     }
     
     @IBAction func btnToThired(_ sender: Any) {
-        if let thiredViewController:ThiredViewController=UIStoryboard.init(name:"Main", bundle: nil).instantiateViewController(withIdentifier:"ThiredViewController") as? ThiredViewController{
+        if let thiredViewController:ThiredViewController=UIStoryboard.init(name:"MainStoryboard", bundle: nil).instantiateViewController(withIdentifier:"ThiredViewController") as? ThiredViewController{
             self.navigationController!.pushViewController(thiredViewController, animated: true);
         }
     }
