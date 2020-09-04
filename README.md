@@ -13,6 +13,10 @@ Navigation Kit used for make threat with screen that have differents navigation 
 * can set default navigation bar style if Viewcontroller not implement NavigationDelegate will take this default style.
 
 # How used (configuration): 
+
+# Requirements
+ios 13+ , swift 5+
+
 # Pod install
 ```ruby
 pod 'NavigationKit',:git => "https://github.com/salah-mohammed/NavigationKit.git"
