@@ -12,11 +12,12 @@ Navigation Kit used for make threat with screen that have differents navigation 
 * can make navigation bar color transparent for every single screen.
 * can set default navigation bar style if Viewcontroller not implement NavigationDelegate will take this default style.
 
-# How used (configuration): 
 
 # Requirements
 * IOS 13+ 
 * Swift 5+
+
+# How used (configuration): 
 
 # Pod install
 ```ruby
