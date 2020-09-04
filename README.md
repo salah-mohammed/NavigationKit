@@ -15,7 +15,7 @@ Navigation Kit used for make threat with screen that have differents navigation 
 # How used (configuration): 
 
 # Requirements
-ios 13+ , swift 5+
+IOS 13+ , swift 5+
 
 # Pod install
 ```ruby
