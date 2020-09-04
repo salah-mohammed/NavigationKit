@@ -103,6 +103,10 @@ NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.Nav
 ```swift
 (self.navigationController as? MainNavigationController)?.refrehNavigationData();
  ```
+## License
+
+NavigationKit is released under the MIT license. [See LICENSE](https://github.com/salah-mohammed/NavigationKit/blob/master/LICENSE) for details.
+
 # Developer's information to communicate
 
 - salah.mohamed_1995@hotmail.com
