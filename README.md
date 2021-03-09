@@ -12,7 +12,13 @@ Navigation Kit used for make threat with screen that have differents navigation 
 * can make navigation bar color transparent for every single screen.
 * can set default navigation bar style if Viewcontroller not implement NavigationDelegate will take this default style.
 
+
+# Requirements
+* IOS 13+ 
+* Swift 5+
+
 # How used (configuration): 
+
 # Pod install
 ```ruby
 pod 'NavigationKit',:git => "https://github.com/salah-mohammed/NavigationKit.git"
@@ -25,7 +31,7 @@ public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationManager.sharedInstance.navigationController=self;
+        NavigationManager.shared.navigationController=self;
         // Do any additional setup after loading the view.
     }
     
@@ -35,9 +41,9 @@ public class MainNavigationController: NavigationController {
 
 if you want set Navigation bar transparent and change title color .
 ```swift
-class FirstViewController: UIViewController,NavigationInfoDelegate {
+class FirstViewController: UIViewController,NavigationDelegate {
  
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.transparent, UIColor.black))
+    var navigationData:NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.transparent,titleColor:UIColor.black))
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +56,9 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
  
  ```swift
 
-  class SecondViewController: UIViewController,NavigationInfoDelegate {
+  class SecondViewController: UIViewController,NavigationDelegate {
   
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
+  var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.customColor(UIColor.blue), titleColor:  UIColor.white))
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +68,9 @@ class FirstViewController: UIViewController,NavigationInfoDelegate {
 if you want to hide Navigation bar.
 
  ```swift
- class ThiredViewController: UIViewController,NavigationInfoDelegate {
+ class ThiredViewController: UIViewController,NavigationDelegate {
 
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.hide);
+    var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.hide);
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,9 +81,9 @@ if you want to hide Navigation bar.
 if you want to set background image for Navigation bar and set title color for it.
 
  ```swift
- class ForthViewController: UIViewController,NavigationInfoDelegate {
+ class ForthViewController: UIViewController,NavigationDelegate {
 
-    var navigationColor: NavigationColorData=NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor(NavigationColorManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), UIColor.white))
+    var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), titleColor: UIColor.white))
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,16 +94,22 @@ if you want to set background image for Navigation bar and set title color for i
 
 if you want to set default style 'if Viewcontroller not implement NavigationInfoDelegate'
 ```swift
-NavigationColorManager.sharedInstance.defaultColor = NavigationColorData.init(hideNavigation: NavigationColorManager.HideNavigation.customColor( NavigationColorManager.BarColor.customColor(UIColor.blue), UIColor.white))
+NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.customColor(UIColor.blue), titleColor:  UIColor.white))
 
  ```
 # Configure Successfully
 
 # You can refresh navigation style by 
 ```swift
-(self.navigationController as? MainNavigationController)?.refrehNavigationInfoVisibleViewController();
+(self.navigationController as? MainNavigationController)?.refrehNavigationData();
  ```
+## License
+
+NavigationKit is released under the MIT license. [See LICENSE](https://github.com/salah-mohammed/NavigationKit/blob/master/LICENSE) for details.
+
 # Developer's information to communicate
 
 - salah.mohamed_1995@hotmail.com
 - https://www.facebook.com/salah.shaker.7
+- +972597105861 (whatsApp And PhoneNumber)
+
