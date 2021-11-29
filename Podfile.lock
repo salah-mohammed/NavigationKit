@@ -1,21 +1,3 @@
-PODS:
-  - NavigationKit (0.0.2)
+PODFILE CHECKSUM: 9424f806c90db5f6a23cbe90330530bda3db63a1
 
-DEPENDENCIES:
-  - NavigationKit (from `https://github.com/salah-mohammed/NavigationKit.git`)
-
-EXTERNAL SOURCES:
-  NavigationKit:
-    :git: https://github.com/salah-mohammed/NavigationKit.git
-
-CHECKOUT OPTIONS:
-  NavigationKit:
-    :commit: 50bd847a60f5bd65b34f17725c35040e290b723f
-    :git: https://github.com/salah-mohammed/NavigationKit.git
-
-SPEC CHECKSUMS:
-  NavigationKit: 82ece38cd849e4bd85674e65e0b0a88c951846ec
-
-PODFILE CHECKSUM: d64c5a82fd98646758c5ce057e2063f04f631dc1
-
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0

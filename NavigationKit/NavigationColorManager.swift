@@ -13,6 +13,9 @@ public protocol NavigationDelegate{
 }
 
 open class NavigationManager:NSObject{
+    var tabbarImplemntation = TabbarControllerImplemntation();
+    var navigationImplemntation = NavigationControllerImplemntation();
+
     public enum NavigationStyle{
     case hide
     case custom(BarColor,titleColor:UIColor)
@@ -55,31 +58,29 @@ override init() {
                 self.navigationController?.navigationBar.isHidden=false;
                       switch barColor {
                       case .transparent:
-                          transparentNav();
+                          self.navigationController?.navigationBar.setTransparent(backgroundColor: nil, textAttributes: [.foregroundColor:textColor], tintColor: nil);
                           break;
                       case .customColor(let color):
-                          self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-                          self.navigationController?.navigationBar.barTintColor=color
-                          self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
-                          self.navigationController?.navigationBar.isTranslucent = false
+//                          self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+//                          self.navigationController?.navigationBar.barTintColor=color
+//                          self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
+//                          self.navigationController?.navigationBar.isTranslucent = false
+                          self.navigationController?.navigationBar.set(backgroundImage: nil, backgroundColor: color, textAttributes: [.foregroundColor:textColor], tintColor: nil);
                           break;
                       case .backgroundImage(let image):
-                          self.navigationController?.navigationBar.setBackgroundImage(image.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
-                      self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
-                      self.navigationController?.navigationBar.isTranslucent = false
-                          break;
- 
-                          }
-                     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:textColor]
+                          self.navigationController?.navigationBar.set(backgroundImage: image, backgroundColor: nil, textAttributes: [.foregroundColor:textColor], tintColor: nil)
+//                          self.navigationController?.navigationBar.setBackgroundImage(image.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
+//                      self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
+//                      self.navigationController?.navigationBar.isTranslucent = false
+//                          break;
+//
+//                          }
+//                     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:textColor]
                      break;
 
             }
-            }
-
+        }
     }
-    func transparentNav(){
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-    }
+     }
 }
+

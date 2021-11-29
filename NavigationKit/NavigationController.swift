@@ -13,21 +13,31 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
         self.delegate=self;
         // Do any additional setup after loading the view.
     }
-    
+    // MARK:refreh NavigationData for VisibleViewController
+}
 
-    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        if let viewController:NavigationDelegate=viewController as? NavigationDelegate{
-        NavigationManager.shared.readViewController(navigationDelegate: viewController);
-        }else if let defaultColor:NavigationData = NavigationManager.shared.defaultData{
-            NavigationManager.shared.read(navigationColor:defaultColor)
+extension UITabBarController{
+    open func refrehNavigationData(){
+        if let selectedViewController:UIViewController=self.selectedViewController{
+        NavigationManager.shared.read(selectedViewController);
         }
     }
-     // MARK:refreh NavigationData for VisibleViewController
+}
+extension UINavigationController{
     open func refrehNavigationData(){
-        if let viewController:NavigationDelegate = self.visibleViewController as? NavigationDelegate{
-              NavigationManager.shared.readViewController(navigationDelegate: viewController);
-        }else if let defaultColor:NavigationData = NavigationManager.shared.defaultData{
-            NavigationManager.shared.read(navigationColor:defaultColor)
+        if let visibleViewController:UIViewController=visibleViewController{
+        NavigationManager.shared.read(visibleViewController);
         }
+    }
+}
+open class NavigationControllerImplemntation:NSObject,UINavigationControllerDelegate{
+    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        NavigationManager.shared.read(viewController);
+    }
+}
+
+open class TabbarControllerImplemntation:NSObject,UITabBarControllerDelegate{
+    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
+        NavigationManager.shared.read(viewController);
     }
 }
