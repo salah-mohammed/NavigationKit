@@ -11,14 +11,20 @@ import UIKit
 public protocol NavigationDelegate{
     var navigationData:NavigationData{set get}
 }
+public enum AppearanceType{
+case  standard(UINavigationBarAppearance)
+case  scrollEdge(UINavigationBarAppearance)
+case  compact(UINavigationBarAppearance)
+case  all(UINavigationBarAppearance)
 
+}
 open class NavigationManager:NSObject{
 //    var tabbarImplemntation = TabbarControllerImplemntation();
 //    var navigationImplemntation = NavigationControllerImplemntation();
 
     public enum NavigationStyle{
     case hide
-    case custom(UINavigationBarAppearance)
+    case custom(AppearanceType)
     }
     public enum BarColor{
     case transparent
