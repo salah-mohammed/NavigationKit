@@ -16,5 +16,8 @@ public class MainNavigationController: NavigationController {
         NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.hide);
         // Do any additional setup after loading the view.
     }
-    
+    public override func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        super.navigationController(navigationController, willShow: viewController, animated: animated)
+        viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: String(), style: .plain, target: nil, action: nil)
+    }
 }

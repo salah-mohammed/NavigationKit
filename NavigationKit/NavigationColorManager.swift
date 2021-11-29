@@ -18,7 +18,7 @@ open class NavigationManager:NSObject{
 
     public enum NavigationStyle{
     case hide
-    case custom(BarColor,titleColor:UIColor)
+    case custom(UINavigationBarAppearance)
     }
     public enum BarColor{
     case transparent
@@ -54,32 +54,10 @@ override init() {
             case .hide:
                 self.navigationController?.navigationBar.isHidden=true;
                 break;
-            case .custom(let barColor,let textColor):
+            case .custom(let appearance):
                 self.navigationController?.navigationBar.isHidden=false;
-                      switch barColor {
-                      case .transparent:
-                          self.navigationController?.navigationBar.setTransparent(backgroundColor: nil, textAttributes: [.foregroundColor:textColor], tintColor: nil);
-                          break;
-                      case .customColor(let color):
-                          print("a");
-//                          self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-//                          self.navigationController?.navigationBar.barTintColor=color
-//                          self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
-//                          self.navigationController?.navigationBar.isTranslucent = false
-                          self.navigationController?.navigationBar.set(backgroundImage: nil, backgroundColor: color, textAttributes: [.foregroundColor:textColor], tintColor: nil);
-                          break;
-                      case .backgroundImage(let image):
-                          self.navigationController?.navigationBar.set(backgroundImage: image, backgroundColor: nil, textAttributes: [.foregroundColor:textColor], tintColor: nil)
-//                          self.navigationController?.navigationBar.setBackgroundImage(image.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode: .stretch), for: .default)
-//                      self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
-//                      self.navigationController?.navigationBar.isTranslucent = false
-//                          break;
-//
-//                          }
-//                     navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:textColor]
-                     break;
-
-            }
+                self.navigationController?.navigationBar.standardAppearance=appearance
+                self.navigationController?.navigationBar.scrollEdgeAppearance=appearance;
         }
     }
      }
