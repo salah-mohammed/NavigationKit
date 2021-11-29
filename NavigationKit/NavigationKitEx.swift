@@ -11,8 +11,17 @@ import UIKit
 extension UINavigationBar{
     func set(backgroundImage:UIImage?,backgroundColor:UIColor?,textAttributes:[NSAttributedString.Key : Any]?,tintColor:UIColor?){
         if #available(iOS 13.0, *) {
+            
+            
+            let temp = UINavigationBarAppearance();
             let appearance = self.standardAppearance
+            //
             appearance.configureWithDefaultBackground()
+            // return line to default
+            appearance.backgroundColor = temp.backgroundColor
+            appearance.backgroundEffect = temp.backgroundEffect
+            appearance.shadowColor = temp.shadowColor
+            
             appearance.titleTextAttributes=textAttributes ?? [:]
             appearance.largeTitleTextAttributes=textAttributes ?? [:]
             appearance.backgroundColor = backgroundColor
@@ -23,15 +32,26 @@ extension UINavigationBar{
 
         } else {
         }
+        
+        //
+        // return line to default
+        self.shadowImage = UIImage()
+        //
         self.titleTextAttributes = textAttributes ?? [:]
-        self.setBackgroundImage(backgroundImage?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode:.stretch) ?? UIImage(), for: .default)
+        if let backgroundImage:UIImage = backgroundImage{
+        self.setBackgroundImage(backgroundImage.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode:.stretch) ?? UIImage(), for: .default)
+        }else{
+            self.setBackgroundImage(UIImage.init(), for: .default);
+        }
         self.tintColor = tintColor
         self.barTintColor = backgroundColor
+        self.isTranslucent = true
+    
     }
     
     public func setTransparent(backgroundColor:UIColor?,textAttributes:[NSAttributedString.Key : Any]?,tintColor:UIColor?){
         if #available(iOS 13.0, *) {
-            let appearance = self.standardAppearance ?? UINavigationBarAppearance()
+            let appearance = self.standardAppearance
             appearance.configureWithDefaultBackground()
             appearance.backgroundColor = backgroundColor ?? .clear
             appearance.backgroundEffect = .none
@@ -49,6 +69,7 @@ extension UINavigationBar{
         self.setBackgroundImage(UIImage(), for: .default)
         self.shadowImage = UIImage()
         self.barTintColor = backgroundColor ?? .clear
+        
     }
 
 }

@@ -14,6 +14,9 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
         // Do any additional setup after loading the view.
     }
     // MARK:refreh NavigationData for VisibleViewController
+    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        NavigationManager.shared.read(viewController);
+    }
 }
 
 extension UITabBarController{
@@ -30,14 +33,15 @@ extension UINavigationController{
         }
     }
 }
-open class NavigationControllerImplemntation:NSObject,UINavigationControllerDelegate{
-    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        NavigationManager.shared.read(viewController);
-    }
-}
-
-open class TabbarControllerImplemntation:NSObject,UITabBarControllerDelegate{
-    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
-        NavigationManager.shared.read(viewController);
-    }
-}
+//open class NavigationControllerImplemntation:NSObject,UINavigationControllerDelegate{
+//    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+//        NavigationManager.shared.read(viewController);
+//    }
+//
+//}
+//
+//open class TabbarControllerImplemntation:NSObject,UITabBarControllerDelegate{
+//    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
+//        NavigationManager.shared.read(viewController);
+//    }
+//}

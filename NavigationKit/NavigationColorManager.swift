@@ -13,8 +13,8 @@ public protocol NavigationDelegate{
 }
 
 open class NavigationManager:NSObject{
-    var tabbarImplemntation = TabbarControllerImplemntation();
-    var navigationImplemntation = NavigationControllerImplemntation();
+//    var tabbarImplemntation = TabbarControllerImplemntation();
+//    var navigationImplemntation = NavigationControllerImplemntation();
 
     public enum NavigationStyle{
     case hide
@@ -61,6 +61,7 @@ override init() {
                           self.navigationController?.navigationBar.setTransparent(backgroundColor: nil, textAttributes: [.foregroundColor:textColor], tintColor: nil);
                           break;
                       case .customColor(let color):
+                          print("a");
 //                          self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
 //                          self.navigationController?.navigationBar.barTintColor=color
 //                          self.navigationController?.navigationBar.shadowImage = self.navigationBarShadowImage;
