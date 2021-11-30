@@ -19,7 +19,7 @@ case  all(UINavigationBarAppearance)
 case  cutome(standard:UINavigationBarAppearance,scrollEdge:UINavigationBarAppearance,compact:UINavigationBarAppearance)
 }
 open class Navigation:NSObject{
-    public enum NavigationStyle{
+    public enum Style{
     case hide
     // apperanceType , tintColor
     case custom(AppearanceType,UIColor)
@@ -47,7 +47,7 @@ override init() {
         self.read(navigationColor:navigationDelegate.navigationData);
     }
      func read(navigationColor:NavigationData){
-        if let navigationStyle:NavigationStyle = navigationColor.navigationStyle{
+        if let navigationStyle:Style = navigationColor.navigationStyle{
             switch navigationStyle {
             case .hide:
                 self.navigationController?.navigationBar.isHidden=true;
@@ -69,8 +69,6 @@ override init() {
                     self.navigationController?.navigationBar.scrollEdgeAppearance=scrollEdge;
                     self.navigationController?.navigationBar.compactAppearance=compact;
                 }
-                
-
         }
     }
      }

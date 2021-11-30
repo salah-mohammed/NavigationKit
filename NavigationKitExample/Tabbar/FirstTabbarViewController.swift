@@ -9,7 +9,7 @@
 import UIKit
 import NavigationKit
 class FirstTabbarViewController: UIViewController,NavigationDelegate {
-    var navigationData=NavigationData.init(Navigation.NavigationStyle.custom(.all(AppStyle.greenBarStyle),UIColor.white))
+    var navigationData=NavigationData.init(Navigation.Style.custom(.all(AppStyle.greenBarStyle),UIColor.white))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class FirstTabbarViewController: UIViewController,NavigationDelegate {
         // Do any additional setup after loading the view.
     }
     @IBAction func btnRefresh(_ sender: Any) {
-        self.navigationData = NavigationData.init(Navigation.NavigationStyle.custom(.all(AppStyle.yelloBarStyle),UIColor.black))
+        self.navigationData = NavigationData.init(Navigation.Style.custom(.all(AppStyle.yelloBarStyle),UIColor.black))
         (self.navigationController as? MainNavigationController)?.refrehNavigationData();
     }
 
