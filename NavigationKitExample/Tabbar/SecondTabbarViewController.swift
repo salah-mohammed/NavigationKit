@@ -8,7 +8,7 @@
 
 import UIKit
 import NavigationKit
-class SecondTabbarViewController: UIViewController/*,NavigationDelegate*/ {
+class SecondTabbarViewController: UIViewController,NavigationDelegate {
     var style=Navigation.Style.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white)
 
     override func viewDidLoad() {
