@@ -13,7 +13,9 @@ public class MainNavigationController: NavigationController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         NavigationManager.shared.navigationController=self;
-        NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.hide);
+//        NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.hide);
+        NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.yelloBarStyle),UIColor.white))
+
         // Do any additional setup after loading the view.
     }
     public override func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {

@@ -27,6 +27,7 @@
 		4E86DAD727560B1C00C471B5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DAD627560B1C00C471B5 /* MainTabBarController.swift */; };
 		4E86DAE02756207600C471B5 /* FirstTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */; };
 		4E86DAE22756208A00C471B5 /* SecondTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */; };
+		4E86DAE42756255F00C471B5 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DAE32756255F00C471B5 /* AppStyle.swift */; };
 		F96E8880118A1F50CFA1C6DD /* Pods_NavigationKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1411E2EC348DA2B3C65A523B /* Pods_NavigationKitExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		4E86DAD627560B1C00C471B5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabbarViewController.swift; sourceTree = "<group>"; };
 		4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabbarViewController.swift; sourceTree = "<group>"; };
+		4E86DAE32756255F00C471B5 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		A74CC3BFA66BA3B5B4571522 /* Pods_NavigationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1FA5D99AFF9E328F2CCE7A /* Pods-NavigationKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationKitExample.debug.xcconfig"; path = "Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,15 +150,15 @@
 		4E6ECD6324F6583200225EBE /* NavigationKitExample */ = {
 			isa = PBXGroup;
 			children = (
-				4E86DADE2756202A00C471B5 /* Main */,
 				4E6ECD6424F6583200225EBE /* AppDelegate.swift */,
+				4E86DAE32756255F00C471B5 /* AppStyle.swift */,
+				4E86DADE2756202A00C471B5 /* Main */,
 				4E6ECD9C24F8E7A000225EBE /* SceneDelegate.swift */,
 				4E6ECD6824F6583200225EBE /* FirstViewController.swift */,
 				4E6ECD7824F658F200225EBE /* SecondViewController.swift */,
 				4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */,
 				4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */,
-				4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */,
-				4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */,
+				4E86DAE5275625C500C471B5 /* Tabbar */,
 				4E6ECD6D24F6583600225EBE /* Assets.xcassets */,
 				4E6ECD9924F8E6B300225EBE /* MainStoryboard.storyboard */,
 				4E6ECD6F24F6583600225EBE /* LaunchScreen.storyboard */,
@@ -180,6 +182,15 @@
 				4E86DAD627560B1C00C471B5 /* MainTabBarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		4E86DAE5275625C500C471B5 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */,
+				4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		EBAFCF4A202A6DCA5F294B1F /* Frameworks */ = {
@@ -348,6 +359,7 @@
 				4E86DAD727560B1C00C471B5 /* MainTabBarController.swift in Sources */,
 				4E6ECD6524F6583200225EBE /* AppDelegate.swift in Sources */,
 				4E6ECD7B24F661C400225EBE /* ThiredViewController.swift in Sources */,
+				4E86DAE42756255F00C471B5 /* AppStyle.swift in Sources */,
 				4E6ECD9124F8CEFF00225EBE /* ForthViewController.swift in Sources */,
 				4E6ECD7724F6588600225EBE /* MainNavigationController.swift in Sources */,
 				4E6ECD7924F658F200225EBE /* SecondViewController.swift in Sources */,

@@ -28,7 +28,7 @@
         <!--Item 2-->
         <scene sceneID="BiP-MZ-7aS">
             <objects>
-                <viewController storyboardIdentifier="FirstTabbarViewController" id="qre-Ra-0sn" customClass="FirstTabbarViewController" customModule="NavigationKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondTabbarViewController" id="qre-Ra-0sn" customClass="SecondTabbarViewController" customModule="NavigationKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s7n-KJ-Wcc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
         <!--Item 1-->
         <scene sceneID="it7-ZC-W9t">
             <objects>
-                <viewController storyboardIdentifier="SecondTabbarViewController" id="8eZ-3b-sXB" customClass="SecondTabbarViewController" customModule="NavigationKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstTabbarViewController" id="8eZ-3b-sXB" customClass="FirstTabbarViewController" customModule="NavigationKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7fS-Pp-Ipe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
