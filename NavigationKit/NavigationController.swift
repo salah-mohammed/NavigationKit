@@ -12,6 +12,9 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
    open override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate=self;
+       if NavigationManager.shared.navigationController == nil {
+       NavigationManager.shared.navigationController = self;
+       }
         // Do any additional setup after loading the view.
     }
     // MARK:refreh NavigationData for VisibleViewController

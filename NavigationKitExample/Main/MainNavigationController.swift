@@ -9,11 +9,14 @@
 import UIKit
 import NavigationKit
 public class MainNavigationController: NavigationController {
-
+    open override var viewControllers: [UIViewController]{
+        didSet{
+            print("sa");
+        }
+    }
     public override func viewDidLoad() {
         super.viewDidLoad()
         NavigationManager.shared.navigationController=self;
-//        NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.hide);
         NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.yelloBarStyle),UIColor.white))
 
         // Do any additional setup after loading the view.

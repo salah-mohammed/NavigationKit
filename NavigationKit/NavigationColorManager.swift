@@ -16,9 +16,6 @@ case  all(UINavigationBarAppearance)
 case  cutome(standard:UINavigationBarAppearance,scrollEdge:UINavigationBarAppearance,compact:UINavigationBarAppearance)
 }
 open class NavigationManager:NSObject{
-//    var tabbarImplemntation = TabbarControllerImplemntation();
-//    var navigationImplemntation = NavigationControllerImplemntation();
-
     public enum NavigationStyle{
     case hide
     // apperanceType , tintColor
@@ -35,13 +32,7 @@ open class NavigationManager:NSObject{
             self.navigationController?.refrehNavigationData();
         }
     }
-    private var navigationBarShadowImage:UIImage?
-    
-    public var navigationController:NavigationController?{
-        didSet{
-            navigationBarShadowImage=self.navigationController?.navigationBar.shadowImage;
-        }
-    }
+    public var navigationController:NavigationController?
    
     public static let shared: NavigationManager = { NavigationManager()} ()
 
