@@ -24,6 +24,9 @@
 		4E6ECD9124F8CEFF00225EBE /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */; };
 		4E6ECD9B24F8E6B300225EBE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6ECD9924F8E6B300225EBE /* MainStoryboard.storyboard */; };
 		4E6ECD9D24F8E7A100225EBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD9C24F8E7A000225EBE /* SceneDelegate.swift */; };
+		4E86DAD727560B1C00C471B5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DAD627560B1C00C471B5 /* MainTabBarController.swift */; };
+		4E86DAE02756207600C471B5 /* FirstTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */; };
+		4E86DAE22756208A00C471B5 /* SecondTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */; };
 		F96E8880118A1F50CFA1C6DD /* Pods_NavigationKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1411E2EC348DA2B3C65A523B /* Pods_NavigationKitExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		4E6ECD9624F8E22800225EBE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E6ECD9A24F8E6B300225EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4E6ECD9C24F8E7A000225EBE /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4E86DAD627560B1C00C471B5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabbarViewController.swift; sourceTree = "<group>"; };
+		4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabbarViewController.swift; sourceTree = "<group>"; };
 		A74CC3BFA66BA3B5B4571522 /* Pods_NavigationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1FA5D99AFF9E328F2CCE7A /* Pods-NavigationKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationKitExample.debug.xcconfig"; path = "Target Support Files/Pods-NavigationKitExample/Pods-NavigationKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,13 +148,15 @@
 		4E6ECD6324F6583200225EBE /* NavigationKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				4E86DADE2756202A00C471B5 /* Main */,
 				4E6ECD6424F6583200225EBE /* AppDelegate.swift */,
 				4E6ECD9C24F8E7A000225EBE /* SceneDelegate.swift */,
 				4E6ECD6824F6583200225EBE /* FirstViewController.swift */,
 				4E6ECD7824F658F200225EBE /* SecondViewController.swift */,
-				4E6ECD7624F6588600225EBE /* MainNavigationController.swift */,
 				4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */,
 				4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */,
+				4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */,
+				4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */,
 				4E6ECD6D24F6583600225EBE /* Assets.xcassets */,
 				4E6ECD9924F8E6B300225EBE /* MainStoryboard.storyboard */,
 				4E6ECD6F24F6583600225EBE /* LaunchScreen.storyboard */,
@@ -163,6 +171,15 @@
 				4E6ECD9624F8E22800225EBE /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E86DADE2756202A00C471B5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4E6ECD7624F6588600225EBE /* MainNavigationController.swift */,
+				4E86DAD627560B1C00C471B5 /* MainTabBarController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		EBAFCF4A202A6DCA5F294B1F /* Frameworks */ = {
@@ -327,11 +344,14 @@
 			files = (
 				4E6ECD6924F6583200225EBE /* FirstViewController.swift in Sources */,
 				4E6ECD9D24F8E7A100225EBE /* SceneDelegate.swift in Sources */,
+				4E86DAE22756208A00C471B5 /* SecondTabbarViewController.swift in Sources */,
+				4E86DAD727560B1C00C471B5 /* MainTabBarController.swift in Sources */,
 				4E6ECD6524F6583200225EBE /* AppDelegate.swift in Sources */,
 				4E6ECD7B24F661C400225EBE /* ThiredViewController.swift in Sources */,
 				4E6ECD9124F8CEFF00225EBE /* ForthViewController.swift in Sources */,
 				4E6ECD7724F6588600225EBE /* MainNavigationController.swift in Sources */,
 				4E6ECD7924F658F200225EBE /* SecondViewController.swift in Sources */,
+				4E86DAE02756207600C471B5 /* FirstTabbarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

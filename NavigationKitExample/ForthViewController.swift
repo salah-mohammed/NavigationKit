@@ -11,7 +11,7 @@ import NavigationKit
 
 
 class ForthViewController: UIViewController,NavigationDelegate {
-    var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white))
+    var navigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white))
     
 
     @IBOutlet weak var btnRefresh: UIButton!

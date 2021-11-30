@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l7O-dz-YLN"/>
+                        <segue destination="nt1-n7-75j" kind="relationship" relationship="rootViewController" id="glx-db-Fua"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-RP-FSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -28,7 +28,7 @@
         <!--Item 2-->
         <scene sceneID="BiP-MZ-7aS">
             <objects>
-                <viewController id="qre-Ra-0sn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstTabbarViewController" id="qre-Ra-0sn" customClass="FirstTabbarViewController" customModule="NavigationKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s7n-KJ-Wcc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
         <!--Item 1-->
         <scene sceneID="it7-ZC-W9t">
             <objects>
-                <viewController id="8eZ-3b-sXB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondTabbarViewController" id="8eZ-3b-sXB" customClass="SecondTabbarViewController" customModule="NavigationKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7fS-Pp-Ipe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-214" y="988"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="7Bu-wN-znA">
             <objects>
-                <tabBarController id="nt1-n7-75j" sceneMemberID="viewController">
+                <tabBarController id="nt1-n7-75j" customClass="MainTabBarController" customModule="NavigationKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Wj0-au-FxA"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3vI-S7-v6L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

@@ -10,7 +10,7 @@ import UIKit
 import NavigationKit
 
 class ThiredViewController: UIViewController,NavigationDelegate {
-    var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.hide);
+    var navigationData=NavigationData.init(NavigationManager.NavigationStyle.hide);
 
     override func viewDidLoad() {
         super.viewDidLoad()

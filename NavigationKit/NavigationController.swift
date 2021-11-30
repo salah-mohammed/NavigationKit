@@ -7,7 +7,8 @@
 //
 import UIKit
 open class NavigationController: UINavigationController,UINavigationControllerDelegate {
-
+    private var tabBarObservations: [(UITabBarController,NSKeyValueObservation)]=[(UITabBarController,NSKeyValueObservation)]();
+    @objc dynamic var tabBarControllerItem:UITabBarController!
    open override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate=self;
@@ -15,7 +16,27 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
     }
     // MARK:refreh NavigationData for VisibleViewController
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        NavigationManager.shared.read(viewController);
+        if let  tabBarController:UITabBarController = viewController as? UITabBarController {
+            self.addTabbarController(tabBarController);
+        }else{
+            NavigationManager.shared.read(viewController);
+        }
+    }
+    
+    private func addTabbarController(_ tabBarControllerItem:UITabBarController){
+        self.tabBarControllerItem=tabBarControllerItem
+        var observer = observe(
+            \.tabBarControllerItem?.selectedViewController,
+             options: [.old, .new]
+         ) { object, change in
+             if let selectedViewController:UIViewController = change.newValue as? UIViewController{
+                 NavigationManager.shared.read(selectedViewController);
+             }
+         }
+        if let selectedViewController:UIViewController = tabBarControllerItem.selectedViewController {
+        NavigationManager.shared.read(selectedViewController);
+        }
+        self.tabBarObservations.append((tabBarControllerItem,observer));
     }
 }
 
@@ -33,15 +54,3 @@ extension UINavigationController{
         }
     }
 }
-//open class NavigationControllerImplemntation:NSObject,UINavigationControllerDelegate{
-//    open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-//        NavigationManager.shared.read(viewController);
-//    }
-//
-//}
-//
-//open class TabbarControllerImplemntation:NSObject,UITabBarControllerDelegate{
-//    public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
-//        NavigationManager.shared.read(viewController);
-//    }
-//}
