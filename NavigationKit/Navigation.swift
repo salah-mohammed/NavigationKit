@@ -64,10 +64,11 @@ override init() {
 
                     break;
                 case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact):
-                    
-                    self.navigationController?.navigationBar.standardAppearance=standard
-                    self.navigationController?.navigationBar.scrollEdgeAppearance=scrollEdge ?? standard
-                    self.navigationController?.navigationBar.compactAppearance=compact; ?? standard
+                    let appearance = UINavigationBarAppearance()
+                        appearance.configureWithDefaultBackground()
+                    self.navigationController?.navigationBar.standardAppearance=standard ?? appearance
+                    self.navigationController?.navigationBar.scrollEdgeAppearance=scrollEdge ?? standard ?? appearance
+                    self.navigationController?.navigationBar.compactAppearance=compact ?? standard ?? appearance
                 }
         }
     }
