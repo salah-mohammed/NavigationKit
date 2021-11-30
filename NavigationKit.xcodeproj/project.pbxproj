@@ -11,7 +11,6 @@
 		4E04A1082754EC72002FCDD0 /* NavigationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6ECD4F24F656E000225EBE /* NavigationKit.framework */; };
 		4E04A1092754EC72002FCDD0 /* NavigationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6ECD4F24F656E000225EBE /* NavigationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E6ECD5424F656E000225EBE /* NavigationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6ECD5224F656E000225EBE /* NavigationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6ECD5B24F6570800225EBE /* NavigationColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD5A24F6570800225EBE /* NavigationColorData.swift */; };
 		4E6ECD5D24F6572600225EBE /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD5C24F6572600225EBE /* Navigation.swift */; };
 		4E6ECD6524F6583200225EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD6424F6583200225EBE /* AppDelegate.swift */; };
 		4E6ECD6924F6583200225EBE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD6824F6583200225EBE /* FirstViewController.swift */; };
@@ -61,7 +60,6 @@
 		4E04A1062754E956002FCDD0 /* NavigationKitEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationKitEx.swift; sourceTree = "<group>"; };
 		4E6ECD4F24F656E000225EBE /* NavigationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6ECD5224F656E000225EBE /* NavigationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationKit.h; sourceTree = "<group>"; };
-		4E6ECD5A24F6570800225EBE /* NavigationColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationColorData.swift; sourceTree = "<group>"; };
 		4E6ECD5C24F6572600225EBE /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		4E6ECD6224F6583200225EBE /* NavigationKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6ECD6424F6583200225EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		4E6ECD5124F656E000225EBE /* NavigationKit */ = {
 			isa = PBXGroup;
 			children = (
-				4E6ECD5A24F6570800225EBE /* NavigationColorData.swift */,
 				4E6ECD5224F656E000225EBE /* NavigationKit.h */,
 				4E6ECD5C24F6572600225EBE /* Navigation.swift */,
 				4E6ECD7C24F662EE00225EBE /* NavigationController.swift */,
@@ -342,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E6ECD5B24F6570800225EBE /* NavigationColorData.swift in Sources */,
 				4E6ECD7D24F662EE00225EBE /* NavigationController.swift in Sources */,
 				4E04A1072754E956002FCDD0 /* NavigationKitEx.swift in Sources */,
 				4E6ECD5D24F6572600225EBE /* Navigation.swift in Sources */,

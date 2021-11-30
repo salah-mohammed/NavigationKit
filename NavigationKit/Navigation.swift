@@ -12,7 +12,7 @@ import UIKit
 //
 //}
 public protocol NavigationDelegate{
-    var navigationData:NavigationData{set get}
+    var style:Navigation.Style{set get}
 }
 public enum AppearanceType{
 case  all(UINavigationBarAppearance)
@@ -30,7 +30,7 @@ open class Navigation:NSObject{
     case backgroundImage(UIImage)
     }
     
-    public var defaultData:NavigationData?{
+    public var defaultStyle:Navigation.Style?{
         didSet{
             self.navigationController?.refrehNavigationData();
         }
@@ -44,11 +44,10 @@ override init() {
     
 }
    open func readViewController(navigationDelegate:NavigationDelegate){
-        self.read(navigationColor:navigationDelegate.navigationData);
+       self.read(style:navigationDelegate.style);
     }
-     func read(navigationColor:NavigationData){
-        if let navigationStyle:Style = navigationColor.navigationStyle{
-            switch navigationStyle {
+     func read(style:Navigation.Style){
+            switch style {
             case .hide:
                 self.navigationController?.navigationBar.isHidden=true;
                 break;
@@ -71,6 +70,5 @@ override init() {
                 }
         }
     }
-     }
 }
 

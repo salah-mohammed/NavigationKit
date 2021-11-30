@@ -11,8 +11,7 @@ import NavigationKit
 
 
 class ForthViewController: UIViewController,NavigationDelegate {
-    var navigationData=NavigationData.init(Navigation.Style.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white))
-    
+    var style = Navigation.Style.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white)
 
     @IBOutlet weak var btnRefresh: UIButton!
     @IBOutlet weak var lblDescription: UILabel!
@@ -31,8 +30,8 @@ class ForthViewController: UIViewController,NavigationDelegate {
     
     @IBAction func btnRefresh(_ sender: Any) {
         lblDescription.text="navigation bar change background image to set navigation bar yellow color";
-        self.navigationData = NavigationData.init(Navigation.Style.custom(.all(AppStyle.yelloBarStyle),UIColor.black))
-        (self.navigationController as? MainNavigationController)?.refrehNavigationData();
+        self.style = Navigation.Style.custom(.all(AppStyle.yelloBarStyle),UIColor.black)
+        self.navigationController?.refrehNavigationData();
     }
     
     /*

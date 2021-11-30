@@ -42,16 +42,3 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
         self.tabBarObservations.append((tabBarControllerItem,observer));
     }
 }
-
-extension UINavigationController{
-    open func refrehNavigationData(){
-        if let tabBarController:UITabBarController = visibleViewController as? UITabBarController{
-            if let selectedViewController:UIViewController = tabBarController.selectedViewController {
-                Navigation.shared.read(selectedViewController);
-            }
-        }else
-        if let visibleViewController:UIViewController=visibleViewController{
-            Navigation.shared.read(visibleViewController);
-        }
-    }
-}

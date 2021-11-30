@@ -8,77 +8,25 @@
 
 import Foundation
 import UIKit
-extension UINavigationBar{
-    func set(backgroundImage:UIImage?,backgroundColor:UIColor?,textAttributes:[NSAttributedString.Key : Any]?,tintColor:UIColor?){
-        if #available(iOS 13.0, *) {
-            
-            
-            let temp = UINavigationBarAppearance();
-            let appearance = self.standardAppearance
-            //
-            appearance.configureWithDefaultBackground()
-            // return line to default
-            appearance.backgroundColor = temp.backgroundColor
-            appearance.backgroundEffect = temp.backgroundEffect
-            appearance.shadowColor = temp.shadowColor
-            
-            appearance.titleTextAttributes=textAttributes ?? [:]
-            appearance.largeTitleTextAttributes=textAttributes ?? [:]
-            appearance.backgroundColor = backgroundColor
-            appearance.backgroundImage = backgroundImage?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode:.stretch) ?? UIImage()
-            self.standardAppearance = appearance
-            self.compactAppearance = appearance
-            self.scrollEdgeAppearance = appearance
-
-        } else {
-        }
-        
-        //
-        // return line to default
-        self.shadowImage = UIImage()
-        //
-        self.titleTextAttributes = textAttributes ?? [:]
-        if let backgroundImage:UIImage = backgroundImage{
-        self.setBackgroundImage(backgroundImage.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0 ,right: 0), resizingMode:.stretch) ?? UIImage(), for: .default)
-        }else{
-            self.setBackgroundImage(UIImage.init(), for: .default);
-        }
-        self.tintColor = tintColor
-        self.barTintColor = backgroundColor
-        self.isTranslucent = true
-    
-    }
-    
-    public func setTransparent(backgroundColor:UIColor?,textAttributes:[NSAttributedString.Key : Any]?,tintColor:UIColor?){
-        if #available(iOS 13.0, *) {
-            let appearance = self.standardAppearance
-            appearance.configureWithDefaultBackground()
-            appearance.backgroundColor = backgroundColor ?? .clear
-            appearance.backgroundEffect = .none
-            appearance.shadowColor = .clear
-            appearance.titleTextAttributes=textAttributes ?? [:]
-            appearance.largeTitleTextAttributes=textAttributes ?? [:]
-            self.standardAppearance = appearance
-            self.compactAppearance = appearance
-            self.scrollEdgeAppearance = appearance
-        } else {
-        }
-        self.titleTextAttributes = textAttributes ?? [:]
-        self.tintColor = tintColor
-        
-        self.setBackgroundImage(UIImage(), for: .default)
-        self.shadowImage = UIImage()
-        self.barTintColor = backgroundColor ?? .clear
-        
-    }
-
-}
 extension Navigation {
     func read(_ viewController:UIViewController){
         if let viewController:NavigationDelegate=viewController as? NavigationDelegate{
             Navigation.shared.readViewController(navigationDelegate: viewController);
-        }else if let defaultColor:NavigationData = Navigation.shared.defaultData{
-            Navigation.shared.read(navigationColor:defaultColor)
+        }else if let defaultStyle:Navigation.Style = Navigation.shared.defaultStyle{
+            Navigation.shared.read(style:defaultStyle)
+        }
+    }
+}
+
+extension UINavigationController{
+    open func refrehNavigationData(){
+        if let tabBarController:UITabBarController = visibleViewController as? UITabBarController{
+            if let selectedViewController:UIViewController = tabBarController.selectedViewController {
+                Navigation.shared.read(selectedViewController);
+            }
+        }else
+        if let visibleViewController:UIViewController=visibleViewController{
+            Navigation.shared.read(visibleViewController);
         }
     }
 }
