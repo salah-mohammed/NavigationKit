@@ -16,7 +16,10 @@ class FirstTabbarViewController: UIViewController,NavigationDelegate {
 
         // Do any additional setup after loading the view.
     }
-    
+    @IBAction func btnRefresh(_ sender: Any) {
+        self.navigationData = NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.yelloBarStyle),UIColor.black))
+        (self.navigationController as? MainNavigationController)?.refrehNavigationData();
+    }
 
     /*
     // MARK: - Navigation

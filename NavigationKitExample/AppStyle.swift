@@ -29,6 +29,12 @@ class AppStyle:NSObject{
         appearance.titleTextAttributes = [.foregroundColor:UIColor.white];
         return appearance;
     }()
+    static var redBarStyle:UINavigationBarAppearance = {
+        let appearance = AppStyle.cutomeInit()
+        appearance.backgroundColor = UIColor.red
+        appearance.titleTextAttributes = [.foregroundColor:UIColor.white];
+        return appearance;
+    }()
     static var yelloBarStyle:UINavigationBarAppearance = {
         let appearance = AppStyle.cutomeInit()
         appearance.backgroundColor = UIColor.yellow

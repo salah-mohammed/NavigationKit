@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PyF-dV-f6j"/>
+                        <segue destination="nt1-n7-75j" kind="relationship" relationship="rootViewController" id="tyL-ru-ly3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-RP-FSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -48,8 +48,25 @@
                     <view key="view" contentMode="scaleToFill" id="7fS-Pp-Ipe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-hy-if5">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="95p-Gh-lny"/>
+                                    <constraint firstAttribute="width" constant="100" id="b7O-M5-BLT"/>
+                                </constraints>
+                                <state key="normal" title="Refresh Style"/>
+                                <connections>
+                                    <action selector="btnRefresh:" destination="8eZ-3b-sXB" eventType="touchUpInside" id="7ph-1e-eoI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bDA-CK-Bfa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VgL-hy-if5" firstAttribute="centerX" secondItem="7fS-Pp-Ipe" secondAttribute="centerX" id="4Af-eN-BTQ"/>
+                            <constraint firstItem="VgL-hy-if5" firstAttribute="centerY" secondItem="7fS-Pp-Ipe" secondAttribute="centerY" id="8UY-Um-cqj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="KqO-zI-RLg"/>
                 </viewController>

@@ -43,15 +43,13 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
     }
 }
 
-extension UITabBarController{
-    open func refrehNavigationData(){
-        if let selectedViewController:UIViewController=self.selectedViewController{
-        NavigationManager.shared.read(selectedViewController);
-        }
-    }
-}
 extension UINavigationController{
     open func refrehNavigationData(){
+        if let tabBarController:UITabBarController = visibleViewController as? UITabBarController{
+            if let selectedViewController:UIViewController = tabBarController.selectedViewController {
+            NavigationManager.shared.read(selectedViewController);
+            }
+        }else
         if let visibleViewController:UIViewController=visibleViewController{
         NavigationManager.shared.read(visibleViewController);
         }
