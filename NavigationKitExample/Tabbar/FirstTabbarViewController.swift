@@ -19,7 +19,7 @@ class FirstTabbarViewController: UIViewController,NavigationDelegate {
     }
     @IBAction func btnRefresh(_ sender: Any) {
         self.style = Navigation.Style.custom(.all(AppStyle.yelloBarStyle),UIColor.black)
-        self.navigationController?.refrehNavigationData();
+        self.navigationController?.refrehStyle();
     }
 
     /*

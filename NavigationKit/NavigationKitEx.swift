@@ -19,7 +19,7 @@ extension Navigation {
 }
 
 extension UINavigationController{
-    open func refrehNavigationData(){
+    open func refrehStyle(){
         if let tabBarController:UITabBarController = visibleViewController as? UITabBarController{
             if let selectedViewController:UIViewController = tabBarController.selectedViewController {
                 Navigation.shared.read(selectedViewController);

@@ -32,7 +32,7 @@ open class Navigation:NSObject{
     
     public var defaultStyle:Navigation.Style?{
         didSet{
-            self.navigationController?.refrehNavigationData();
+            self.navigationController?.refrehStyle();
         }
     }
     public var navigationController:NavigationController?
