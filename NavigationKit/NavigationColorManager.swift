@@ -12,11 +12,8 @@ public protocol NavigationDelegate{
     var navigationData:NavigationData{set get}
 }
 public enum AppearanceType{
-case  standard(UINavigationBarAppearance)
-case  scrollEdge(UINavigationBarAppearance)
-case  compact(UINavigationBarAppearance)
 case  all(UINavigationBarAppearance)
-
+case  cutome(standard:UINavigationBarAppearance,scrollEdge:UINavigationBarAppearance,compact:UINavigationBarAppearance)
 }
 open class NavigationManager:NSObject{
 //    var tabbarImplemntation = TabbarControllerImplemntation();
@@ -24,7 +21,8 @@ open class NavigationManager:NSObject{
 
     public enum NavigationStyle{
     case hide
-    case custom(AppearanceType)
+    // apperanceType , tintColor
+    case custom(AppearanceType,UIColor)
     }
     public enum BarColor{
     case transparent
@@ -60,10 +58,25 @@ override init() {
             case .hide:
                 self.navigationController?.navigationBar.isHidden=true;
                 break;
-            case .custom(let appearance):
+            case .custom(let appearanceType, let tintColor):
                 self.navigationController?.navigationBar.isHidden=false;
-                self.navigationController?.navigationBar.standardAppearance=appearance
-                self.navigationController?.navigationBar.scrollEdgeAppearance=appearance;
+                self.navigationController?.navigationBar.tintColor=tintColor
+
+                switch appearanceType {
+            
+                case .all(let appearance):
+                    self.navigationController?.navigationBar.standardAppearance=appearance
+                    self.navigationController?.navigationBar.scrollEdgeAppearance=appearance;
+                    self.navigationController?.navigationBar.compactAppearance=appearance;
+
+                    break;
+                case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact):
+                    self.navigationController?.navigationBar.standardAppearance=standard
+                    self.navigationController?.navigationBar.scrollEdgeAppearance=scrollEdge;
+                    self.navigationController?.navigationBar.compactAppearance=compact;
+                }
+                
+
         }
     }
      }
