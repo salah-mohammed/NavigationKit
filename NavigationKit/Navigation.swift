@@ -16,7 +16,7 @@ public protocol NavigationDelegate{
 }
 public enum AppearanceType{
 case  all(UINavigationBarAppearance)
-case  cutome(standard:UINavigationBarAppearance,scrollEdge:UINavigationBarAppearance,compact:UINavigationBarAppearance)
+case  cutome(standard:UINavigationBarAppearance?,scrollEdge:UINavigationBarAppearance?,compact:UINavigationBarAppearance?)
 }
 open class Navigation:NSObject{
     public enum Style{
@@ -64,9 +64,10 @@ override init() {
 
                     break;
                 case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact):
+                    
                     self.navigationController?.navigationBar.standardAppearance=standard
-                    self.navigationController?.navigationBar.scrollEdgeAppearance=scrollEdge;
-                    self.navigationController?.navigationBar.compactAppearance=compact;
+                    self.navigationController?.navigationBar.scrollEdgeAppearance=scrollEdge ?? standard
+                    self.navigationController?.navigationBar.compactAppearance=compact; ?? standard
                 }
         }
     }
