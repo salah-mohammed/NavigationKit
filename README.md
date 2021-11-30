@@ -43,7 +43,7 @@ if you want set Navigation bar transparent and change title color .
 ```swift
 class FirstViewController: UIViewController,NavigationDelegate {
  
-    var navigationData:NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.transparent,titleColor:UIColor.black))
+   var navigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.transparentBarStyle),UIColor.black))
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ class FirstViewController: UIViewController,NavigationDelegate {
 
   class SecondViewController: UIViewController,NavigationDelegate {
   
-  var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.customColor(UIColor.blue), titleColor:  UIColor.white))
+  var navigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.greenBarStyle),UIColor.white))
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,7 @@ if you want to set background image for Navigation bar and set title color for i
  ```swift
  class ForthViewController: UIViewController,NavigationDelegate {
 
-    var navigationData: NavigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.backgroundImage(UIImage.init(named:"navigationImage")!), titleColor: UIColor.white))
+    var navigationData=NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white))
     
         public override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +94,7 @@ if you want to set background image for Navigation bar and set title color for i
 
 if you want to set default style 'if Viewcontroller not implement NavigationInfoDelegate'
 ```swift
-NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.custom(NavigationManager.BarColor.customColor(UIColor.blue), titleColor:  UIColor.white))
+NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.yelloBarStyle),UIColor.white))
 
  ```
 # Configure Successfully
