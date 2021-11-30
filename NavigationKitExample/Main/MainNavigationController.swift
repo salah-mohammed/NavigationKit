@@ -16,8 +16,8 @@ public class MainNavigationController: NavigationController {
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationManager.shared.navigationController=self;
-        NavigationManager.shared.defaultData = NavigationData.init(NavigationManager.NavigationStyle.custom(.all(AppStyle.redBarStyle),UIColor.white))
+        Navigation.shared.navigationController=self;
+        Navigation.shared.defaultData = NavigationData.init(Navigation.NavigationStyle.custom(.all(AppStyle.redBarStyle),UIColor.white))
 
         // Do any additional setup after loading the view.
     }

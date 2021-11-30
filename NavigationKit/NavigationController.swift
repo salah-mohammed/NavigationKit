@@ -12,8 +12,8 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
    open override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate=self;
-       if NavigationManager.shared.navigationController == nil {
-       NavigationManager.shared.navigationController = self;
+       if Navigation.shared.navigationController == nil {
+           Navigation.shared.navigationController = self;
        }
         // Do any additional setup after loading the view.
     }
@@ -22,7 +22,7 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
         if let  tabBarController:UITabBarController = viewController as? UITabBarController {
             self.addTabbarController(tabBarController);
         }else{
-            NavigationManager.shared.read(viewController);
+            Navigation.shared.read(viewController);
         }
     }
     
@@ -33,11 +33,11 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
              options: [.old, .new]
          ) { object, change in
              if let selectedViewController:UIViewController = change.newValue as? UIViewController{
-                 NavigationManager.shared.read(selectedViewController);
+                 Navigation.shared.read(selectedViewController);
              }
          }
         if let selectedViewController:UIViewController = tabBarControllerItem.selectedViewController {
-        NavigationManager.shared.read(selectedViewController);
+            Navigation.shared.read(selectedViewController);
         }
         self.tabBarObservations.append((tabBarControllerItem,observer));
     }
@@ -47,11 +47,11 @@ extension UINavigationController{
     open func refrehNavigationData(){
         if let tabBarController:UITabBarController = visibleViewController as? UITabBarController{
             if let selectedViewController:UIViewController = tabBarController.selectedViewController {
-            NavigationManager.shared.read(selectedViewController);
+                Navigation.shared.read(selectedViewController);
             }
         }else
         if let visibleViewController:UIViewController=visibleViewController{
-        NavigationManager.shared.read(visibleViewController);
+            Navigation.shared.read(visibleViewController);
         }
     }
 }

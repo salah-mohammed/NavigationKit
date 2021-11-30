@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+//class Navigation{
+//
+//}
 public protocol NavigationDelegate{
     var navigationData:NavigationData{set get}
 }
@@ -15,7 +18,7 @@ public enum AppearanceType{
 case  all(UINavigationBarAppearance)
 case  cutome(standard:UINavigationBarAppearance,scrollEdge:UINavigationBarAppearance,compact:UINavigationBarAppearance)
 }
-open class NavigationManager:NSObject{
+open class Navigation:NSObject{
     public enum NavigationStyle{
     case hide
     // apperanceType , tintColor
@@ -34,7 +37,7 @@ open class NavigationManager:NSObject{
     }
     public var navigationController:NavigationController?
    
-    public static let shared: NavigationManager = { NavigationManager()} ()
+    public static let shared: Navigation = { Navigation()} ()
 
 override init() {
     super.init()

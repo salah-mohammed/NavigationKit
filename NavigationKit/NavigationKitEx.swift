@@ -73,12 +73,12 @@ extension UINavigationBar{
     }
 
 }
-extension NavigationManager {
+extension Navigation {
     func read(_ viewController:UIViewController){
         if let viewController:NavigationDelegate=viewController as? NavigationDelegate{
-        NavigationManager.shared.readViewController(navigationDelegate: viewController);
-        }else if let defaultColor:NavigationData = NavigationManager.shared.defaultData{
-            NavigationManager.shared.read(navigationColor:defaultColor)
+            Navigation.shared.readViewController(navigationDelegate: viewController);
+        }else if let defaultColor:NavigationData = Navigation.shared.defaultData{
+            Navigation.shared.read(navigationColor:defaultColor)
         }
     }
 }

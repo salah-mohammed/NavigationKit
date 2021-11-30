@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 open class NavigationData{
-   open var navigationStyle:NavigationManager.NavigationStyle?
-    public init(_ navigationStyle:NavigationManager.NavigationStyle?) {
+   open var navigationStyle:Navigation.NavigationStyle?
+    public init(_ navigationStyle:Navigation.NavigationStyle?) {
         self.navigationStyle=navigationStyle;
     }
 }
