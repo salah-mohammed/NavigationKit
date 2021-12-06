@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="nt1-n7-75j" kind="relationship" relationship="rootViewController" id="tyL-ru-ly3"/>
+                        <segue destination="nt1-n7-75j" kind="relationship" relationship="rootViewController" id="p0w-qI-5um"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km7-RP-FSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -85,8 +85,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8eZ-3b-sXB" kind="relationship" relationship="viewControllers" id="JMe-ro-Jqj"/>
                         <segue destination="qre-Ra-0sn" kind="relationship" relationship="viewControllers" id="H1H-Pi-jMH"/>
+                        <segue destination="8eZ-3b-sXB" kind="relationship" relationship="viewControllers" id="j6q-yR-l5B"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDW-4f-iaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

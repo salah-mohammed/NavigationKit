@@ -9,7 +9,7 @@
 import UIKit
 import NavigationKit
 
-class SecondViewController: UIViewController,NavigationDelegate {
+class SecondViewController: UIViewController,NavigationStyle {
     @IBOutlet weak var btnToThired: UIButton!
     var style = Navigation.Style.custom(.all(AppStyle.greenBarStyle),UIColor.white)
 

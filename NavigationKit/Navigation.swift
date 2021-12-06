@@ -11,7 +11,7 @@ import UIKit
 //class Navigation{
 //
 //}
-public protocol NavigationDelegate{
+public protocol NavigationStyle{
     var style:Navigation.Style{set get}
 }
 public enum AppearanceType{
@@ -43,8 +43,8 @@ override init() {
     super.init()
     
 }
-   open func readViewController(navigationDelegate:NavigationDelegate){
-       self.read(style:navigationDelegate.style);
+   open func readViewController(navigationStyle:NavigationStyle){
+       self.read(style:navigationStyle.style);
     }
      func read(style:Navigation.Style){
             switch style {

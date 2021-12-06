@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 extension Navigation {
     func read(_ viewController:UIViewController){
-        if let viewController:NavigationDelegate=viewController as? NavigationDelegate{
-            Navigation.shared.readViewController(navigationDelegate: viewController);
+        if let viewController:NavigationStyle=viewController as? NavigationStyle{
+            Navigation.shared.readViewController(navigationStyle: viewController);
         }else if let defaultStyle:Navigation.Style = Navigation.shared.defaultStyle{
             Navigation.shared.read(style:defaultStyle)
         }

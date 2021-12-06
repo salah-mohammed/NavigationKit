@@ -10,7 +10,7 @@ import UIKit
 import NavigationKit
 
 
-class ForthViewController: UIViewController,NavigationDelegate {
+class ForthViewController: UIViewController,NavigationStyle {
     var style = Navigation.Style.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white)
 
     @IBOutlet weak var btnRefresh: UIButton!

@@ -9,7 +9,7 @@
 import UIKit
 import NavigationKit
 
-class ThiredViewController: UIViewController,NavigationDelegate {
+class ThiredViewController: UIViewController,NavigationStyle {
     var style = Navigation.Style.hide
     override func viewDidLoad() {
         super.viewDidLoad()

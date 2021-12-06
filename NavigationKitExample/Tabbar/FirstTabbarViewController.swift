@@ -8,7 +8,7 @@
 
 import UIKit
 import NavigationKit
-class FirstTabbarViewController: UIViewController,NavigationDelegate {
+class FirstTabbarViewController: UIViewController,NavigationStyle {
     var style = Navigation.Style.custom(.all(AppStyle.greenBarStyle),UIColor.white)
     
 
