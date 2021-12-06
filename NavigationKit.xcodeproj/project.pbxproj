@@ -27,7 +27,6 @@
 		4E86DAE02756207600C471B5 /* FirstTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DADF2756207600C471B5 /* FirstTabbarViewController.swift */; };
 		4E86DAE22756208A00C471B5 /* SecondTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DAE12756208A00C471B5 /* SecondTabbarViewController.swift */; };
 		4E86DAE42756255F00C471B5 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E86DAE32756255F00C471B5 /* AppStyle.swift */; };
-		F96E8880118A1F50CFA1C6DD /* Pods_NavigationKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1411E2EC348DA2B3C65A523B /* Pods_NavigationKitExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F96E8880118A1F50CFA1C6DD /* Pods_NavigationKitExample.framework in Frameworks */,
 				4E04A1082754EC72002FCDD0 /* NavigationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
