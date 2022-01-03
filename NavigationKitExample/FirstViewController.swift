@@ -11,6 +11,7 @@ import NavigationKit
 class FirstViewController: UIViewController,NavigationStyle {
     @IBOutlet weak var btToSecondViewController: UIButton!
     var style = Navigation.Style.custom(.all(AppStyle.transparentBarStyle),UIColor.black)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="Transparent";

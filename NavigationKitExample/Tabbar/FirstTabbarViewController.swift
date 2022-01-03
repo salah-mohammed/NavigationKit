@@ -17,6 +17,11 @@ class FirstTabbarViewController: UIViewController,NavigationStyle {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.title="First";
+        self.tabBarController?.title=self.title
+    }
     @IBAction func btnRefresh(_ sender: Any) {
         self.style = Navigation.Style.custom(.all(AppStyle.yelloBarStyle),UIColor.black)
         self.navigationController?.refrehStyle();

@@ -8,15 +8,18 @@
 
 import UIKit
 import NavigationKit
-class SecondTabbarViewController: UIViewController,NavigationStyle {
-    var style=Navigation.Style.custom(.all(AppStyle.backgroundImageBarStyle),UIColor.white)
+class SecondTabbarViewController: UITableViewController,NavigationStyle {
+    var style=Navigation.Style.custom(.cutome(standard: AppStyle.backgroundImageBarStyle, scrollEdge: AppStyle.redBarStyle, compact: AppStyle.yelloBarStyle),UIColor.white)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.title="Second";
+        self.tabBarController?.title=self.title
+    }
 
     /*
     // MARK: - Navigation
