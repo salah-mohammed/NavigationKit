@@ -70,7 +70,7 @@ if you want to hide Navigation bar.
  ```swift
  class ThiredViewController: UIViewController,NavigationDelegate {
 
-    var style: NavigationData=Navigation.Style.init(Navigation.Style.hide);
+    var style=Navigation.Style.init(Navigation.Style.hide);
     
         public override func viewDidLoad() {
         super.viewDidLoad()
