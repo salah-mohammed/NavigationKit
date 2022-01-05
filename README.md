@@ -31,7 +31,7 @@ public class MainNavigationController: NavigationController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationManager.shared.navigationController=self;
+        Navigation.shared.navigationController=self;
         // Do any additional setup after loading the view.
     }
     
