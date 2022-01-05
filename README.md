@@ -101,7 +101,7 @@ Navigation.shared.defaultStyle = Navigation.Style.custom(.all(AppStyle.yelloBarS
 
 # You can refresh navigation style by 
 ```swift
-(self.navigationController as? MainNavigationController)?.refrehNavigationData();
+self.navigationController?.refrehStyle();
  ```
 ## License
 
