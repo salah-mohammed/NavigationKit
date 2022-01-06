@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+//back title
+//names for style
+//protocol functions not variables
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

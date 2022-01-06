@@ -22,7 +22,7 @@ open class Navigation:NSObject{
     public enum Style{
     case hide
     // apperanceType , tintColor
-    case custom(AppearanceType,UIColor)
+        case custom(apperanceType:AppearanceType,tintColor:UIColor)
     }
     public enum BarColor{
     case transparent

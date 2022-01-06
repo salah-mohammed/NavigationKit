@@ -9,7 +9,7 @@
 import UIKit
 import NavigationKit
 class FirstTabbarViewController: UIViewController,NavigationStyle {
-    var style = Navigation.Style.custom(.all(AppStyle.greenBarStyle),UIColor.white)
+     var style = Navigation.Style.custom(apperanceType: .all(AppStyle.greenBarStyle),tintColor: UIColor.white)
     
 
     override func viewDidLoad() {
@@ -23,9 +23,13 @@ class FirstTabbarViewController: UIViewController,NavigationStyle {
         self.tabBarController?.title=self.title
     }
     @IBAction func btnRefresh(_ sender: Any) {
-        self.style = Navigation.Style.custom(.all(AppStyle.yelloBarStyle),UIColor.black)
+        self.style = Navigation.Style.custom(apperanceType: .all(AppStyle.yelloBarStyle),tintColor: UIColor.black)
         self.navigationController?.refrehStyle();
     }
+//    func asd(style:Navigation.Style)-> Navigation.Style? {
+//
+//        return nil;
+//    }
 
     /*
     // MARK: - Navigation

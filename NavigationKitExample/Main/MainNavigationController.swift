@@ -17,7 +17,7 @@ public class MainNavigationController: NavigationController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         Navigation.shared.navigationController=self;
-        Navigation.shared.defaultStyle = Navigation.Style.custom(.all(AppStyle.redBarStyle),UIColor.white)
+        Navigation.shared.defaultStyle = Navigation.Style.custom(apperanceType:.all(AppStyle.redBarStyle),tintColor:UIColor.white)
 
         // Do any additional setup after loading the view.
     }
@@ -26,3 +26,4 @@ public class MainNavigationController: NavigationController {
         viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: String(), style: .plain, target: nil, action: nil)
     }
 }
+
