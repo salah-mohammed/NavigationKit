@@ -22,7 +22,7 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         self.read(viewController);
     }
-    @objc func backSwipAction(_ sender:UIPanGestureRecognizer?){
+    @objc private func backSwipAction(_ sender:UIPanGestureRecognizer?){
         if sender?.state == .ended{
             DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
                 if let viewController:UIViewController = self.viewControllers.last{
@@ -31,7 +31,7 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
             }
         }
     }
-    func read(_ viewController:UIViewController){
+    private func read(_ viewController:UIViewController){
         if let  tabBarController:UITabBarController = viewController as? UITabBarController {
             self.addTabbarController(tabBarController);
         }else{
