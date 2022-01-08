@@ -15,30 +15,44 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
        if Navigation.shared.navigationController == nil {
            Navigation.shared.navigationController = self;
        }
+       interactivePopGestureRecognizer?.addTarget(self, action: #selector(backSwipAction(_:))) 
         // Do any additional setup after loading the view.
     }
     // MARK:refreh NavigationData for VisibleViewController
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        self.read(viewController);
+    }
+    @objc func backSwipAction(_ sender:UIPanGestureRecognizer?){
+        if sender?.state == .ended{
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
+                if let viewController:UIViewController = self.viewControllers.last{
+                    self.read(viewController);
+                }
+            }
+        }
+    }
+    func read(_ viewController:UIViewController){
         if let  tabBarController:UITabBarController = viewController as? UITabBarController {
             self.addTabbarController(tabBarController);
         }else{
             Navigation.shared.read(viewController);
         }
     }
-    
     private func addTabbarController(_ tabBarControllerItem:UITabBarController){
-        self.tabBarControllerItem=tabBarControllerItem
-        var observer = observe(
-            \.tabBarControllerItem?.selectedViewController,
-             options: [.old, .new]
-         ) { object, change in
-             if let selectedViewController:UIViewController = change.newValue as? UIViewController{
-                 Navigation.shared.read(selectedViewController);
+        if tabBarObservations.filter({$0.0 == tabBarControllerItem}).first == nil {
+            self.tabBarControllerItem=tabBarControllerItem
+            var observer = observe(
+                \.tabBarControllerItem?.selectedViewController,
+                 options: [.old, .new]
+             ) { object, change in
+                 if let selectedViewController:UIViewController = change.newValue as? UIViewController{
+                     Navigation.shared.read(selectedViewController);
+                 }
              }
-         }
-        if let selectedViewController:UIViewController = tabBarControllerItem.selectedViewController {
-            Navigation.shared.read(selectedViewController);
+            if let selectedViewController:UIViewController = tabBarControllerItem.selectedViewController {
+                Navigation.shared.read(selectedViewController);
+            }
+            self.tabBarObservations.append((tabBarControllerItem,observer));
         }
-        self.tabBarObservations.append((tabBarControllerItem,observer));
     }
 }
