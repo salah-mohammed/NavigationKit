@@ -49,10 +49,10 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
                      Navigation.shared.read(selectedViewController);
                  }
              }
-            if let selectedViewController:UIViewController = tabBarControllerItem.selectedViewController {
-                Navigation.shared.read(selectedViewController);
-            }
             self.tabBarObservations.append((tabBarControllerItem,observer));
+        }
+        if let selectedViewController:UIViewController = tabBarControllerItem.selectedViewController {
+            Navigation.shared.read(selectedViewController);
         }
     }
 }
