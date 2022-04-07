@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 extension Navigation {
-    func read(_ viewController:UIViewController){
+    func read(_ viewController:UIViewController,navigationController:UINavigationController){
         if let viewController:NavigationStyle=viewController as? NavigationStyle{
-            Navigation.shared.readViewController(navigationStyle: viewController);
+            Navigation.shared.readViewController(navigationStyle: viewController,navigationController);
         }else if let defaultStyle:Navigation.Style = Navigation.shared.defaultStyle{
-            Navigation.shared.read(style:defaultStyle)
+            Navigation.shared.read(style:defaultStyle,navigationController)
         }
     }
 }
@@ -22,11 +22,11 @@ extension UINavigationController{
     open func refrehStyle(){
         if let tabBarController:UITabBarController = visibleViewController as? UITabBarController{
             if let selectedViewController:UIViewController = tabBarController.selectedViewController {
-                Navigation.shared.read(selectedViewController);
+                Navigation.shared.read(selectedViewController, navigationController: self);
             }
         }else
         if let visibleViewController:UIViewController=visibleViewController{
-            Navigation.shared.read(visibleViewController);
+            Navigation.shared.read(visibleViewController, navigationController: self);
         }
     }
 }

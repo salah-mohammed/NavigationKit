@@ -11,12 +11,13 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
     @objc dynamic var tabBarControllerItem:UITabBarController!
    open override func viewDidLoad() {
         super.viewDidLoad()
+       Navigation.shared.addNavigationController(self);
         self.delegate=self;
-       if Navigation.shared.navigationController == nil {
-           Navigation.shared.navigationController = self;
-       }
        interactivePopGestureRecognizer?.addTarget(self, action: #selector(backSwipAction(_:))) 
         // Do any additional setup after loading the view.
+    }
+    deinit {
+        Navigation.shared.removeNvigationController(self);
     }
     // MARK:refreh NavigationData for VisibleViewController
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
@@ -35,7 +36,7 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
         if let  tabBarController:UITabBarController = viewController as? UITabBarController {
             self.addTabbarController(tabBarController);
         }else{
-            Navigation.shared.read(viewController);
+            Navigation.shared.read(viewController, navigationController: self);
         }
     }
     private func addTabbarController(_ tabBarControllerItem:UITabBarController){
@@ -46,13 +47,13 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
                  options: [.old, .new]
              ) { object, change in
                  if let selectedViewController:UIViewController = change.newValue as? UIViewController{
-                     Navigation.shared.read(selectedViewController);
+                     Navigation.shared.read(selectedViewController, navigationController: self);
                  }
              }
             self.tabBarObservations.append((tabBarControllerItem,observer));
         }
         if let selectedViewController:UIViewController = tabBarControllerItem.selectedViewController {
-            Navigation.shared.read(selectedViewController);
+            Navigation.shared.read(selectedViewController, navigationController: self);
         }
     }
 }

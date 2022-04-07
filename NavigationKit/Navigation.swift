@@ -32,10 +32,12 @@ open class Navigation:NSObject{
     
     public var defaultStyle:Navigation.Style?{
         didSet{
-            self.navigationController?.refrehStyle();
+            for navigationController in navigationControllers{
+                navigationController.refrehStyle();
+            }
         }
     }
-    public var navigationController:NavigationController?
+    private var navigationControllers:[UINavigationController]=[UINavigationController]();
    
     public static let shared: Navigation = { Navigation()} ()
 
@@ -43,34 +45,42 @@ override init() {
     super.init()
     
 }
-   open func readViewController(navigationStyle:NavigationStyle){
-       self.read(style:navigationStyle.style);
+   open func readViewController(navigationStyle:NavigationStyle,_ navigationController:UINavigationController){
+       self.read(style:navigationStyle.style,navigationController);
     }
-     func read(style:Navigation.Style){
+    func read(style:Navigation.Style,_ navigationController:UINavigationController){
             switch style {
             case .hide:
-                self.navigationController?.navigationBar.isHidden=true;
+                navigationController.navigationBar.isHidden=true;
                 break;
             case .custom(let appearanceType, let tintColor):
-                self.navigationController?.navigationBar.isHidden=false;
-                self.navigationController?.navigationBar.tintColor=tintColor
+                navigationController.navigationBar.isHidden=false;
+                navigationController.navigationBar.tintColor=tintColor
 
                 switch appearanceType {
             
                 case .all(let appearance):
-                    self.navigationController?.navigationBar.standardAppearance=appearance
-                    self.navigationController?.navigationBar.scrollEdgeAppearance=appearance;
-                    self.navigationController?.navigationBar.compactAppearance=appearance;
+                navigationController.navigationBar.standardAppearance=appearance
+                navigationController.navigationBar.scrollEdgeAppearance=appearance;
+                navigationController.navigationBar.compactAppearance=appearance;
 
                     break;
                 case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact):
                     let appearance = UINavigationBarAppearance()
                         appearance.configureWithDefaultBackground()
-                    self.navigationController?.navigationBar.standardAppearance=standard ?? appearance
-                    self.navigationController?.navigationBar.scrollEdgeAppearance=scrollEdge ?? standard ?? appearance
-                    self.navigationController?.navigationBar.compactAppearance=compact ?? standard ?? appearance
+                navigationController.navigationBar.standardAppearance=standard ?? appearance
+                navigationController.navigationBar.scrollEdgeAppearance=scrollEdge ?? standard ?? appearance
+                navigationController.navigationBar.compactAppearance=compact ?? standard ?? appearance
                 }
         }
+    }
+    func addNavigationController(_ navigationController:UINavigationController){
+        if self.navigationControllers.filter({$0 == navigationController}).first == nil {
+            self.navigationControllers.append(navigationController);
+        }
+    }
+    func removeNvigationController(_ navigationController:UINavigationController){
+        self.navigationControllers.removeAll(where: {$0 == navigationController})
     }
 }
 
