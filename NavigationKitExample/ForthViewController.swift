@@ -27,7 +27,9 @@ class ForthViewController: UIViewController,NavigationStyle {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
     }
-    
+    deinit {
+        print("\nForthViewController")
+    }
     @IBAction func btnRefresh(_ sender: Any) {
         lblDescription.text="navigation bar change background image to set navigation bar yellow color";
         self.style = Navigation.Style.custom(apperanceType: .all(AppStyle.yelloBarStyle),tintColor: UIColor.black)

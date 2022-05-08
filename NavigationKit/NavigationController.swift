@@ -23,6 +23,12 @@ open class NavigationController: UINavigationController,UINavigationControllerDe
     open func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         self.read(viewController);
     }
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .pop {
+            self.tabBarObservations.removeAll(where:{$0.0 == fromVC})
+        }
+        return nil
+    }
     @objc private func backSwipAction(_ sender:UIPanGestureRecognizer?){
         if sender?.state == .ended{
             DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {

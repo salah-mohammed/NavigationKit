@@ -12,6 +12,8 @@
 		4E04A1092754EC72002FCDD0 /* NavigationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6ECD4F24F656E000225EBE /* NavigationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E26369027F044FD00007C42 /* NavigationKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E26368F27F044FD00007C42 /* NavigationKitExampleUITests.swift */; };
 		4E26369227F044FD00007C42 /* NavigationKitExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E26369127F044FD00007C42 /* NavigationKitExampleUITestsLaunchTests.swift */; };
+		4E62052E2802FC5100C61731 /* SecondNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62052D2802FC5100C61731 /* SecondNavigationController.swift */; };
+		4E6205322803012D00C61731 /* InternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6205312803012D00C61731 /* InternalViewController.swift */; };
 		4E6ECD5424F656E000225EBE /* NavigationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6ECD5224F656E000225EBE /* NavigationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6ECD5D24F6572600225EBE /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD5C24F6572600225EBE /* Navigation.swift */; };
 		4E6ECD6524F6583200225EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ECD6424F6583200225EBE /* AppDelegate.swift */; };
@@ -69,6 +71,8 @@
 		4E26368D27F044FD00007C42 /* NavigationKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E26368F27F044FD00007C42 /* NavigationKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationKitExampleUITests.swift; sourceTree = "<group>"; };
 		4E26369127F044FD00007C42 /* NavigationKitExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationKitExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4E62052D2802FC5100C61731 /* SecondNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNavigationController.swift; sourceTree = "<group>"; };
+		4E6205312803012D00C61731 /* InternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalViewController.swift; sourceTree = "<group>"; };
 		4E6ECD4F24F656E000225EBE /* NavigationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6ECD5224F656E000225EBE /* NavigationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationKit.h; sourceTree = "<group>"; };
 		4E6ECD5C24F6572600225EBE /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				4E6ECD7824F658F200225EBE /* SecondViewController.swift */,
 				4E6ECD7A24F661C400225EBE /* ThiredViewController.swift */,
 				4E6ECD9024F8CEFF00225EBE /* ForthViewController.swift */,
+				4E6205312803012D00C61731 /* InternalViewController.swift */,
 				4E86DAE5275625C500C471B5 /* Tabbar */,
 				4E6ECD6D24F6583600225EBE /* Assets.xcassets */,
 				4E6ECD9924F8E6B300225EBE /* MainStoryboard.storyboard */,
@@ -205,6 +210,7 @@
 			children = (
 				4E6ECD7624F6588600225EBE /* MainNavigationController.swift */,
 				4E86DAD627560B1C00C471B5 /* MainTabBarController.swift */,
+				4E62052D2802FC5100C61731 /* SecondNavigationController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6ECD6924F6583200225EBE /* FirstViewController.swift in Sources */,
+				4E6205322803012D00C61731 /* InternalViewController.swift in Sources */,
 				4E6ECD9D24F8E7A100225EBE /* SceneDelegate.swift in Sources */,
 				4E86DAE22756208A00C471B5 /* SecondTabbarViewController.swift in Sources */,
 				4E86DAD727560B1C00C471B5 /* MainTabBarController.swift in Sources */,
@@ -426,6 +433,7 @@
 				4E6ECD9124F8CEFF00225EBE /* ForthViewController.swift in Sources */,
 				4E6ECD7724F6588600225EBE /* MainNavigationController.swift in Sources */,
 				4E6ECD7924F658F200225EBE /* SecondViewController.swift in Sources */,
+				4E62052E2802FC5100C61731 /* SecondNavigationController.swift in Sources */,
 				4E86DAE02756207600C471B5 /* FirstTabbarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

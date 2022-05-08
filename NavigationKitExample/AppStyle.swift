@@ -14,7 +14,7 @@ class AppStyle:NSObject{
     static func cutomeInit()->UINavigationBarAppearance{
     let appearance = UINavigationBarAppearance()
         appearance.configureWithDefaultBackground()
-        appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
+//        appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
      return appearance
     }
     static var defaultBarStyle:UINavigationBarAppearance = {

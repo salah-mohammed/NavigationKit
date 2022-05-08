@@ -16,6 +16,9 @@ class ThiredViewController: UIViewController,NavigationStyle {
 
         // Do any additional setup after loading the view.
     }
+    deinit {
+        print("\nThiredViewController")
+    }
     @IBAction func btnToForth(_ sender: Any) {
         if let thiredViewController:ForthViewController=UIStoryboard.init(name:"MainStoryboard", bundle: nil).instantiateViewController(withIdentifier:"ForthViewController") as? ForthViewController{
             self.navigationController!.pushViewController(thiredViewController, animated: true);

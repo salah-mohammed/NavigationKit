@@ -1,22 +1,21 @@
 //
-//  MainTabBarController.swift
+//  SecondNavigationController.swift
 //  NavigationKitExample
 //
-//  Created by Salah on 11/30/21.
-//  Copyright © 2021 Salah. All rights reserved.
+//  Created by Salah on 4/10/22.
+//  Copyright © 2022 Salah. All rights reserved.
 //
 
 import UIKit
-
-class MainTabBarController: UITabBarController {
+import NavigationKit
+class SecondNavigationController: NavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
-    deinit {
-        print("\nMainTabBarController")
-    }
+    
 
     /*
     // MARK: - Navigation

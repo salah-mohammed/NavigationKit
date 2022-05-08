@@ -21,6 +21,9 @@ class FirstViewController: UIViewController,NavigationStyle {
         super.viewWillAppear(animated);
         
     }
+    deinit {
+        print("\nFirstViewController")
+    }
     @IBAction func btToSecondViewController(_ sender: Any) {
         if let secondViewController:SecondViewController=UIStoryboard.init(name:"MainStoryboard", bundle: nil).instantiateViewController(withIdentifier:"SecondViewController") as? SecondViewController{
             self.navigationController!.pushViewController(secondViewController, animated: true);
