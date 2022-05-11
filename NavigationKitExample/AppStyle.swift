@@ -61,7 +61,7 @@ class AppStyle:NSObject{
         
         return appearance;
     }()
-    
+    //
     static var yelloBarStyle:Navigation.Style{
         return Navigation.Style.custom(apperanceType:.all(AppStyle.yelloBarAppearance),tintColor:UIColor.black)
     }
