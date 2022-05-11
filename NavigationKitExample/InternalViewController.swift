@@ -9,7 +9,7 @@
 import UIKit
 import NavigationKit
 class InternalViewController: UIViewController,NavigationStyle {
-    var style = Navigation.Style.custom(apperanceType:.all(AppStyle.backgroundImageBarStyle),tintColor:UIColor.green)
+    var style = AppStyle.backgroundImageBarStyle
     override func viewDidLoad() {
         super.viewDidLoad()
 

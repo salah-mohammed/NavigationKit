@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import NavigationKit
 class AppStyle:NSObject{
     static var backImage:UIImage = UIImage.init(named:"ic_backImage") ?? UIImage.init()
     
@@ -17,32 +17,32 @@ class AppStyle:NSObject{
 //        appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
      return appearance
     }
-    static var defaultBarStyle:UINavigationBarAppearance = {
+    static var defaultBarAppearance:UINavigationBarAppearance = {
         let appearance = AppStyle.cutomeInit()
         appearance.backgroundColor = UIColor.red
         appearance.titleTextAttributes = [.foregroundColor:UIColor.white];
         return appearance;
     }()
-    static var greenBarStyle:UINavigationBarAppearance = {
+    static var greenBarAppearance:UINavigationBarAppearance = {
         let appearance = AppStyle.cutomeInit()
         appearance.backgroundColor = UIColor.green
         appearance.titleTextAttributes = [.foregroundColor:UIColor.white];
         
         return appearance;
     }()
-    static var redBarStyle:UINavigationBarAppearance = {
+    static var redBarAppearance:UINavigationBarAppearance = {
         let appearance = AppStyle.cutomeInit()
         appearance.backgroundColor = UIColor.red
         appearance.titleTextAttributes = [.foregroundColor:UIColor.white];
         return appearance;
     }()
-    static var yelloBarStyle:UINavigationBarAppearance = {
+    static var yelloBarAppearance:UINavigationBarAppearance = {
         let appearance = AppStyle.cutomeInit()
         appearance.backgroundColor = UIColor.yellow
         appearance.titleTextAttributes = [.foregroundColor:UIColor.black];
         return appearance;
     }()
-    static var transparentBarStyle:UINavigationBarAppearance = {
+    static var transparentBarAppearance:UINavigationBarAppearance = {
         let appearance = AppStyle.cutomeInit()
         appearance.backgroundColor = .clear
         appearance.backgroundEffect = .none
@@ -51,7 +51,7 @@ class AppStyle:NSObject{
         appearance.largeTitleTextAttributes = [:]
         return appearance;
     }()
-    static var backgroundImageBarStyle:UINavigationBarAppearance = {
+    static var backgroundImageBarAppearance:UINavigationBarAppearance = {
         let appearance = AppStyle.cutomeInit()
         appearance.backgroundEffect = .none
         appearance.shadowColor = .clear
@@ -61,4 +61,21 @@ class AppStyle:NSObject{
         
         return appearance;
     }()
+    
+    static var yelloBarStyle:Navigation.Style{
+        return Navigation.Style.custom(apperanceType:.all(AppStyle.yelloBarAppearance),tintColor:UIColor.black)
+    }
+    static var redBarStyle:Navigation.Style{
+      return Navigation.Style.custom(apperanceType:.all(AppStyle.redBarAppearance),tintColor:UIColor.white)
+    }
+    
+    static var greenBarStyle:Navigation.Style{
+      return Navigation.Style.custom(apperanceType:.all(AppStyle.greenBarAppearance),tintColor:UIColor.white)
+    }
+    static var transparentBarStyle:Navigation.Style{
+        return Navigation.Style.custom(apperanceType:.all(AppStyle.transparentBarAppearance),tintColor:UIColor.black)
+    }
+    static var backgroundImageBarStyle:Navigation.Style{
+        return Navigation.Style.custom(apperanceType:.all(AppStyle.backgroundImageBarAppearance),tintColor:UIColor.white)
+    }
 }

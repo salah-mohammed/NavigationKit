@@ -9,7 +9,7 @@
 import UIKit
 import NavigationKit
 class SecondTabbarViewController: UITableViewController,NavigationStyle {
-    var style=Navigation.Style.custom(apperanceType: .cutome(standard: AppStyle.backgroundImageBarStyle, scrollEdge: AppStyle.redBarStyle, compact: AppStyle.yelloBarStyle),tintColor: UIColor.white)
+    var style=Navigation.Style.custom(apperanceType: .cutome(standard: AppStyle.backgroundImageBarAppearance, scrollEdge: AppStyle.redBarAppearance, compact: AppStyle.yelloBarAppearance),tintColor: UIColor.white)
 
     override func viewDidLoad() {
         super.viewDidLoad()

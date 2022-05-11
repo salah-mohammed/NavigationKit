@@ -16,7 +16,7 @@ public class MainNavigationController: NavigationController {
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
-        Navigation.shared.defaultStyle = Navigation.Style.custom(apperanceType:.all(AppStyle.redBarStyle),tintColor:UIColor.white)
+        Navigation.shared.defaultStyle = AppStyle.redBarStyle
 
         // Do any additional setup after loading the view.
     }
