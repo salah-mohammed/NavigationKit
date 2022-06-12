@@ -12,6 +12,7 @@
 		4E04A1092754EC72002FCDD0 /* NavigationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6ECD4F24F656E000225EBE /* NavigationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E26369027F044FD00007C42 /* NavigationKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E26368F27F044FD00007C42 /* NavigationKitExampleUITests.swift */; };
 		4E26369227F044FD00007C42 /* NavigationKitExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E26369127F044FD00007C42 /* NavigationKitExampleUITestsLaunchTests.swift */; };
+		4E5388482855FCB3008C8794 /* SwiftUINavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5388472855FCB3008C8794 /* SwiftUINavigation.swift */; };
 		4E62052E2802FC5100C61731 /* SecondNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E62052D2802FC5100C61731 /* SecondNavigationController.swift */; };
 		4E6205322803012D00C61731 /* InternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6205312803012D00C61731 /* InternalViewController.swift */; };
 		4E6ECD5424F656E000225EBE /* NavigationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6ECD5224F656E000225EBE /* NavigationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,6 +72,7 @@
 		4E26368D27F044FD00007C42 /* NavigationKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E26368F27F044FD00007C42 /* NavigationKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationKitExampleUITests.swift; sourceTree = "<group>"; };
 		4E26369127F044FD00007C42 /* NavigationKitExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationKitExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4E5388472855FCB3008C8794 /* SwiftUINavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigation.swift; sourceTree = "<group>"; };
 		4E62052D2802FC5100C61731 /* SecondNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNavigationController.swift; sourceTree = "<group>"; };
 		4E6205312803012D00C61731 /* InternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalViewController.swift; sourceTree = "<group>"; };
 		4E6ECD4F24F656E000225EBE /* NavigationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 				4E6ECD7C24F662EE00225EBE /* NavigationController.swift */,
 				4E6ECD9524F8E22800225EBE /* Resources */,
 				4E04A1062754E956002FCDD0 /* NavigationKitEx.swift */,
+				4E5388472855FCB3008C8794 /* SwiftUINavigation.swift */,
 			);
 			path = NavigationKit;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6ECD7D24F662EE00225EBE /* NavigationController.swift in Sources */,
+				4E5388482855FCB3008C8794 /* SwiftUINavigation.swift in Sources */,
 				4E04A1072754E956002FCDD0 /* NavigationKitEx.swift in Sources */,
 				4E6ECD5D24F6572600225EBE /* Navigation.swift in Sources */,
 			);

@@ -30,3 +30,21 @@ extension UINavigationController{
         }
     }
 }
+extension UIApplication {
+    // swiftUI
+    public var bs_swiftUINavigationController:UINavigationController?{
+        return UIApplication.shared.bs_window?.rootViewController?.children.first?.children.first as? UINavigationController
+    }
+    public var bs_window: UIWindow? {
+            if #available(iOS 13.0, *) {
+                return UIApplication
+                    .shared
+                    .connectedScenes
+                    .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                    .first { $0.isKeyWindow }
+            } else {
+                return UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+            }
+       }
+}
+
