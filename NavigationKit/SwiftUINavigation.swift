@@ -20,7 +20,7 @@ struct NavigationBarModifier: ViewModifier {
         case .custom(apperanceType: let apperanceType, tintColor: let tintColor):
             switch apperanceType{
             case .all(let value):
-                let navigationBar = UIApplication.shared.bs_swiftUINavigationController?.navigationBar
+                let navigationBar = UIApplication.shared.swiftUINavigationController?.navigationBar
                 if let navigationBar:UINavigationBar = navigationBar{
                     navigationBar.standardAppearance = value
                     navigationBar.scrollEdgeAppearance = value
@@ -34,7 +34,7 @@ struct NavigationBarModifier: ViewModifier {
             case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact):
                 
                 
-                let navigationBar = UIApplication.shared.bs_swiftUINavigationController?.navigationBar
+                let navigationBar = UIApplication.shared.swiftUINavigationController?.navigationBar
                 if let navigationBar:UINavigationBar = navigationBar{
                     navigationBar.standardAppearance = standard ?? UINavigationBarAppearance()
                     navigationBar.scrollEdgeAppearance = scrollEdge
