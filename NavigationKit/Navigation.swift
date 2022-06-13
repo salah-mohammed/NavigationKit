@@ -32,8 +32,12 @@ open class Navigation:NSObject{
     
     public var defaultStyle:Navigation.Style?{
         didSet{
+            if navigationControllers.count == 0 {
+                UIApplication.shared.swiftUINavigationController?.refrehStyle();
+            }else{
             for navigationController in navigationControllers{
                 navigationController.refrehStyle();
+            }
             }
         }
     }
