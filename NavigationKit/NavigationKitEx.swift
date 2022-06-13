@@ -32,10 +32,10 @@ extension UINavigationController{
 }
 extension UIApplication {
     // swiftUI
-    public var bs_swiftUINavigationController:UINavigationController?{
+     var bs_swiftUINavigationController:UINavigationController?{
         return UIApplication.shared.bs_window?.rootViewController?.children.first?.children.first as? UINavigationController
     }
-    public var bs_window: UIWindow? {
+     var bs_window: UIWindow? {
             if #available(iOS 13.0, *) {
                 return UIApplication
                     .shared
