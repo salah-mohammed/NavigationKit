@@ -8,6 +8,16 @@
 
 import Foundation
 import UIKit
+public extension Navigation.Style {
+     var tintColor:UIColor?{
+        switch self{
+        case .hide:
+            return nil
+        case .custom(apperanceType: let _, tintColor: let tintColor):
+            return tintColor
+        }
+    }
+}
 extension Navigation {
     func read(_ viewController:UIViewController,navigationController:UINavigationController){
         if let viewController:NavigationStyle=viewController as? NavigationStyle{
