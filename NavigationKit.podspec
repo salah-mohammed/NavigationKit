@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "NavigationKit"
-  s.version      = "0.0.12"
+  s.version      = "0.0.13"
   s.summary      = "Navigation Kit used for make threat with screen with differents navigation bar style easy."
 
   # This description is used to generate tags and improve search results.

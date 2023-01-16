@@ -16,7 +16,7 @@ public protocol NavigationStyle{
 }
 public enum AppearanceType{
 case  all(UINavigationBarAppearance)
-case  cutome(standard:UINavigationBarAppearance?,scrollEdge:UINavigationBarAppearance?,compact:UINavigationBarAppearance?)
+    case  cutome(standard:UINavigationBarAppearance?,scrollEdge:UINavigationBarAppearance?,compact:UINavigationBarAppearance?,compactScrollEdgeAppearance:UINavigationBarAppearance?)
 }
 open class Navigation:NSObject{
     public enum Style{
@@ -69,12 +69,18 @@ override init() {
                 navigationController.navigationBar.compactAppearance=appearance;
 
                     break;
-                case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact):
+                case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact,compactScrollEdgeAppearance:let compactScrollEdgeAppearance):
                     let appearance = UINavigationBarAppearance()
                         appearance.configureWithDefaultBackground()
                 navigationController.navigationBar.standardAppearance=standard ?? appearance
                 navigationController.navigationBar.scrollEdgeAppearance=scrollEdge ?? standard ?? appearance
                 navigationController.navigationBar.compactAppearance=compact ?? standard ?? appearance
+                    if #available(iOS 15.0, *) {
+                navigationController.navigationBar.compactScrollEdgeAppearance=compactScrollEdgeAppearance ?? standard ?? appearance
+                    } else {
+                        // Fallback on earlier versions
+                    }
+
                 }
         }
     }

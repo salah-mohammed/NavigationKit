@@ -16,8 +16,15 @@ struct NavigationBarModifier: ViewModifier {
     init(style: Navigation.Style) {
         switch style{
         case .hide:
+            let navigationBar = UIApplication.shared.swiftUINavigationController?.navigationBar
+            if let navigationBar:UINavigationBar = navigationBar{
+                navigationBar.isHidden=true;
+            }else{
+                UINavigationBar.appearance().isHidden=true;
+            }
             break;
         case .custom(apperanceType: let apperanceType, tintColor: let tintColor):
+
             switch apperanceType{
             case .all(let value):
                 let navigationBar = UIApplication.shared.swiftUINavigationController?.navigationBar
@@ -25,24 +32,38 @@ struct NavigationBarModifier: ViewModifier {
                     navigationBar.standardAppearance = value
                     navigationBar.scrollEdgeAppearance = value
                     navigationBar.compactAppearance = value
+                    navigationBar.isHidden=false;
                 }else{
                     UINavigationBar.appearance().standardAppearance = value
                     UINavigationBar.appearance().scrollEdgeAppearance = value
                     UINavigationBar.appearance().compactAppearance = value
+                    if #available(iOS 15.0, *) {
+                        UINavigationBar.appearance().compactScrollEdgeAppearance = value
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                    UINavigationBar.appearance().isHidden=false;
+
                 }
                 break;
-            case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact):
-                
-                
+            case .cutome(standard: let standard, scrollEdge: let scrollEdge, compact: let compact, let compactScrollEdgeAppearance):
                 let navigationBar = UIApplication.shared.swiftUINavigationController?.navigationBar
                 if let navigationBar:UINavigationBar = navigationBar{
                     navigationBar.standardAppearance = standard ?? UINavigationBarAppearance()
                     navigationBar.scrollEdgeAppearance = scrollEdge
                     navigationBar.compactAppearance = compact
+                    if #available(iOS 15.0, *) {
+                        navigationBar.compactScrollEdgeAppearance = compactScrollEdgeAppearance
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                    navigationBar.isHidden=false;
                 }else{
                     UINavigationBar.appearance().standardAppearance = standard ?? UINavigationBarAppearance()
                     UINavigationBar.appearance().scrollEdgeAppearance = scrollEdge
                     UINavigationBar.appearance().compactAppearance = compact
+                    UINavigationBar.appearance().compactAppearance = compactScrollEdgeAppearance
+                    UINavigationBar.appearance().isHidden=false;
                 }
             }
             UINavigationBar.appearance().tintColor=tintColor;
