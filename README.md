@@ -4,7 +4,8 @@
 
 # NavigationKit
 
-Navigation Kit used for make threat with screen that have differents navigation bar style, make change style of bar easy.
+ NavigationKit makes managing screens with different navigation bar styles simple, allows easy style changes, and ensures code behavior is explicit without running the app.
+
 # Advantages
 * set Background Image for navigation bar and title color for every single screen.
 * set color for navigation bar and their title for every single screen.
